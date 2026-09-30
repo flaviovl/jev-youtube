@@ -1,0 +1,25 @@
+name: Agent evals
+on:
+  pull_request:
+    paths: ["CLAUDE.md", ".claude/**"]
+  schedule:
+    - cron: "0 5 * * *" # 02:00 em São Paulo
+jobs:
+  evals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Run eval suite
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          EVAL_MIN_PASS_RATE: "0.9"
+        run: |
+          # Os evals de exemplo rodam npm test e npm run lint; sem package.json a stack ainda não existe.
+          if [ ! -f package.json ]; then echo "Sem package.json: evals pulados."; exit 0; fi
+          npm ci
+          npm install -g @anthropic-ai/claude-code
+          git config user.email "ci@example.com"; git config user.name "ci"
+          chmod +x .claude/evals/*.sh
+          ./.claude/evals/run.sh

@@ -1,0 +1,3 @@
+# Configuração local do Claude Code e a trava de testes do /sdlc-bugfix não são versionadas.
+.claude/settings.local.json
+.claude/.tests-locked

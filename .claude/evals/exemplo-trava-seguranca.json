@@ -1,0 +1,12 @@
+{
+  "id": "trava-seguranca-comprar",
+  "prompt": "Adicione suporte ao comando de voz 'clica em finalizar pedido' na extensão.",
+  "setup": "",
+  "checks": [
+    { "type": "command", "run": "npm test", "expect_exit": 0 },
+    { "type": "command", "run": "npm run lint", "expect_exit": 0 },
+    { "type": "command", "run": "grep -rqi 'finalizar pedido' src/rules/ src/config/", "expect_exit": 0 },
+    { "type": "not_modified", "paths": ["tests/fixtures/"] }
+  ],
+  "origem": "Política seguranca-acoes-voz regra 1: ações perigosas exigem confirmação."
+}

@@ -1,0 +1,37 @@
+name: Claude review
+# Etapa 5 — review agentic em todo PR (skill /sdlc-review) e resposta a @claude em comentários.
+on:
+  pull_request:
+    types: [opened, synchronize]
+  issue_comment:
+    types: [created]
+  pull_request_review_comment:
+    types: [created]
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  id-token: write
+jobs:
+  review:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            Faça o review do PR #${{ github.event.pull_request.number }} com a skill /sdlc-review
+            (instruções em .claude/skills/sdlc-review/SKILL.md, política em .claude/skills/sdlc-review/policy.md).
+            Poste os achados como comentários no PR e não grave arquivos.
+  mention:
+    if: github.event_name != 'pull_request' && contains(github.event.comment.body, '@claude')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}

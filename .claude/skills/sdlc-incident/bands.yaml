@@ -1,0 +1,26 @@
+# Etapa 6 — MAINTAIN. Faixas de controle por métrica.
+# Um script determinístico (versionado e com testes) calcula média/desvio numa janela
+# móvel e aplica as regras. Só quando a faixa é rompida o Claude é chamado.
+# Ações do agente são limitadas pelo tier; produção nunca é tocada diretamente.
+
+- metric: ci_test_failure_rate
+  baseline: rolling_30d
+  rules: western_electric
+  tiers:
+    1sigma: { action: log }
+    2sigma: { action: diagnose, tools: "Read,Grep,Bash(gh run view *)" }
+    3sigma: { action: propose, routes: [pull_request, "runbook:rollback-deploy"] }
+
+# Exemplo para o navegador por voz (ajuste à sua telemetria):
+- metric: comando_executado_errado_rate      # usuário desfez/cancelou logo após a ação
+  baseline: rolling_14d
+  rules: western_electric
+  tiers:
+    1sigma: { action: log }
+    2sigma: { action: diagnose, tools: "Read,Grep" }
+    3sigma: { action: propose, routes: [pull_request] }
+
+# action:
+#   log      -> só registra
+#   diagnose -> Claude investiga com as tools listadas e escreve docs/changes/<NNN>-<slug>/intent.md (Origem: alerta)
+#   propose  -> além do intent, pode abrir PR ou acionar runbook PRÉ-APROVADO
