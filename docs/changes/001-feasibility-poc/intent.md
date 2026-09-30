@@ -1,6 +1,6 @@
 # Intent: POC de viabilidade do navegador por voz
 
-Autor: Flavio (produto) · Status: draft · Criado: 2026-09-30
+Autor: Flavio (produto) · Status: approved · Criado: 2026-09-30
 
 Tipo: poc · Origem: perguntas técnicas em aberto do `docs/product/vision.md`
 
@@ -49,4 +49,4 @@ seguir na primeira funcionalidade do produto.
 
 ## Decisão
 
-<preenchido pelo product owner>
+approved por Flavio em 2026-09-30, na conversa com o Claude, que registrou a decisão e fez o commit.
