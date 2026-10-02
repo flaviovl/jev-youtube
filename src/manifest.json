@@ -1,0 +1,9 @@
+{
+  "manifest_version": 3,
+  "name": "Jev: navegador por voz",
+  "version": "0.1.0",
+  "description": "Fale um comando em português e o Chrome executa na aba aberta.",
+  "minimum_chrome_version": "153",
+  "permissions": ["sidePanel", "scripting", "storage"],
+  "host_permissions": ["<all_urls>"]
+}

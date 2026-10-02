@@ -1,0 +1,23 @@
+{
+  "name": "jev-youtube",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Navegador por voz: extensão do Chrome que executa comandos falados em pt-BR na aba aberta.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test \"tests/*.test.js\"",
+    "lint": "eslint . --max-warnings 0",
+    "proxy": "node --env-file=.env proxy/server.js",
+    "eval": "node --env-file=.env scripts/eval.js",
+    "e2e": "node --test \"tests/e2e/*.test.js\""
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.11.0",
+    "globals": "^17.13.0",
+    "playwright": "^1.63.0"
+  }
+}

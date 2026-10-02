@@ -61,7 +61,7 @@ compactação). O código da POC 001 (`_poc/`, ignorado pelo git) é referência
 
 ## Ordem do trabalho
 
-- [ ] 1. Esqueleto: `package.json`, `eslint.config.js`, manifest mínimo, `.env.example` e comandos no `CLAUDE.md`. Fim:
+- [x] 1. Esqueleto: `package.json`, `eslint.config.js`, manifest mínimo, `.env.example` e comandos no `CLAUDE.md`. Fim:
       `npm test` e `npm run lint` saem com 0, e a extensão carrega sem erro em `chrome://extensions`.
 - [ ] 2. Regras: `limiares.js`, `perigo.js`, `decidir.js`, `argumento.js` e testes. Fim: os testes cobrem a regra 1
       (lista fixa e Jev), a regra 3 (ignorar e esperar) e os argumentos dos 6 sites e das duas direções.
@@ -120,4 +120,7 @@ compactação). O código da POC 001 (`_poc/`, ignorado pelo git) é referência
 
 ## Desvios durante a implementação
 
-<preencher se algo mudou em relação ao plano, com motivo>
+- 2026-10-01, testes e2e: ficam em `tests/e2e/*.test.js`, e não em `tests/e2e.test.js`, para o `npm test`
+  (`tests/*.test.js`) não rodar o e2e. O passo 1 ganhou `tests/e2e/carrega.test.js`, que prova a carga da extensão no
+  Chromium, e `tests/e2e/chromium.js`, que abre o Chromium com a extensão; `tests/manifest.test.js` confere que o
+  manifest é MV3 e não declara content script. `.gitignore` ganhou `node_modules/`.

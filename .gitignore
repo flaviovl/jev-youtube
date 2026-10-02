@@ -8,3 +8,5 @@ _*
 .claude/.tests-locked
 # Chaves locais (OpenRouter da POC 001).
 .env
+
+node_modules/

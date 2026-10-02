@@ -10,10 +10,17 @@ limiares) estão em `docs/product/vision.md`; o diagrama da solução completa, 
 
 ## Comandos
 
-Ainda não existem (Build, Teste, Lint, Rodar local). Preencha esta seção e "Verificando seu trabalho" quando o
-`plan.md` do primeiro item de produto (feature) definir a stack; o verifier e os evals leem esses comandos daqui. Os
-evals de exemplo (`.claude/evals/exemplo-*.json`) já presumem `npm test`, `npm run lint`, `src/rules/`, `src/config/` e
-`tests/`.
+Node 22 ou mais novo. JavaScript puro, sem bundler: `src/` é a raiz da extensão MV3, `proxy/` é o proxy local que
+guarda a chave do Jev, `tests/` tem os testes (`node:test`).
+
+- Instalar: `npm install` e, uma vez, `npx playwright install chromium` (os testes de leitura e o e2e usam o Chromium do
+  Playwright, porque o Chrome de marca não aceita `--load-extension`).
+- Teste: `npm test` (unidade, sem rede).
+- Teste e2e: `npm run e2e` (Chromium com a extensão carregada; sem rede).
+- Lint: `npm run lint` (zero warnings).
+- Rodar local: copie `.env.example` para `.env` e preencha; `npm run proxy`; carregue `src/` sem compactação em
+  `chrome://extensions`.
+- Eval do Jev: `npm run eval` (chama o Jev de verdade; custa centavos).
 
 ## Convenções
 
@@ -73,8 +80,8 @@ Nenhuma registrada ainda. Quando um achado de review se repetir pela segunda vez
 
 ## Verificando seu trabalho
 
-- Build: a definir no `plan.md` do primeiro item de produto (deve terminar sem erro)
-- Teste: a definir (tudo verde; nunca pule nem apague teste falhando)
-- Lint: a definir (zero warnings)
+- Build: não há passo de build; `npm run e2e` prova que a extensão carrega (deve terminar sem erro)
+- Teste: `npm test` (tudo verde; nunca pule nem apague teste falhando)
+- Lint: `npm run lint` (zero warnings)
 
 Rode os três antes de dizer que a tarefa terminou e cole a saída. Se um teste falhar, corrija o código, não o teste.
