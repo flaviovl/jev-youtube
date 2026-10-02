@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Página de teste do navegador por voz</title>
+    <style>
+      body { font: 15px system-ui, sans-serif; margin: 16px; }
+      nav a, button { margin-right: 8px; }
+      .azul { background: #1565c0; color: #fff; border: 0; padding: 6px 12px; }
+      .card { display: inline-block; border: 1px solid #999; padding: 8px; cursor: pointer; }
+      #status { position: fixed; bottom: 0; left: 0; right: 0; background: #222; color: #fff; padding: 6px 12px; }
+      .zero { width: 0; height: 0; padding: 0; border: 0; overflow: hidden; }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Início</a>
+      <a href="/videos">Vídeos</a>
+      <a href="/busca?token=TOKEN-PLANTADO-URL#q=segredo">Busca avançada</a>
+      <button>Entrar</button>
+      <button>Criar conta</button>
+      <button aria-label="Configurações">⚙</button>
+    </nav>
+
+    <p><a href="/">Início</a> › Loja</p>
+    <h1>Loja e vídeos de teste</h1>
+    <label>Pesquisar <input type="search" value="INPUT-PLANTADO-BUSCA" /></label>
+    <button>Buscar</button>
+
+    <h2>Vídeos</h2>
+    <a href="/v/1">Vídeo 1: Receita de bolo</a> · <a href="/v/2">Vídeo 2: Música para estudar</a> ·
+    <a href="/v/3">Vídeo 3: Tutorial de violão</a> · <a href="/v/4">Vídeo 4: Notícias do dia</a>
+    <button>Inscrever-se</button>
+
+    <h2>Produto</h2>
+    <button>Comprar agora</button>
+    <button>Adicionar ao carrinho</button>
+    <button class="azul">Salvar</button>
+    <div role="button" tabindex="0">Curtir</div>
+    <div onclick="void 0">Compartilhar</div>
+    <div class="card" id="card-listener">Abrir detalhes do produto</div>
+    <caixa-sombra></caixa-sombra>
+    <iframe title="Quadro de comentários" srcdoc="<button>Comentar no quadro</button>" height="50"></iframe>
+
+    <h2>Conta</h2>
+    <form onsubmit="return false">
+      <label>Usuário <input name="usuario" autocomplete="username" value="usuario-plantado-8841" /></label>
+      <label>Senha <input type="password" value="SENHA-PLANTADA-7391" /></label>
+      <label>Número do cartão <input autocomplete="cc-number" value="4111 1111 1111 1111" /></label>
+      <label>Observações <textarea>TEXTO-PLANTADO-TEXTAREA</textarea></label>
+      <label>Bio <span contenteditable="true">CONTEUDO-PLANTADO-EDITAVEL</span></label>
+      <label>Plano
+        <select>
+          <option>Plano básico</option>
+          <option selected>OPCAO-PLANTADA-SELECIONADA</option>
+        </select>
+      </label>
+      <input type="submit" value="Fazer login" />
+    </form>
+    <button>Excluir conta</button>
+
+    <h2>Ocultos (não devem entrar)</h2>
+    <button style="display: none">Oculto display</button>
+    <button hidden>Oculto hidden</button>
+    <button style="visibility: hidden">Oculto visibility</button>
+    <div aria-hidden="true"><button>Oculto aria</button></div>
+    <button class="zero">Oculto tamanho zero</button>
+
+    <h2>Mais artigos</h2>
+    <ol id="artigos"></ol>
+    <button>Ver mais</button>
+    <button>Próximo</button>
+
+    <div id="status">Nenhum clique ainda</div>
+
+    <script>
+      customElements.define(
+        'caixa-sombra',
+        class extends HTMLElement {
+          connectedCallback() {
+            this.attachShadow({ mode: 'open' }).innerHTML = '<button>Botão na sombra</button>'
+          }
+        },
+      )
+      document.getElementById('card-listener').addEventListener('click', () => {})
+      const artigos = document.getElementById('artigos')
+      for (let i = 1; i <= 160; i++) artigos.insertAdjacentHTML('beforeend', `<li><a href="/artigo/${i}">Artigo ${i}</a></li>`)
+      // Mostra o que foi clicado, para os testes e o roteiro conferirem o clique.
+      document.addEventListener('click', (e) => {
+        const alvo = e.composedPath()[0]
+        document.getElementById('status').textContent = `Clicou em: ${alvo.textContent?.trim().slice(0, 40)} às ${Date.now()}`
+        if (alvo.closest?.('a')) e.preventDefault()
+      })
+    </script>
+  </body>
+</html>

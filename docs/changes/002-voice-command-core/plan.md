@@ -67,7 +67,7 @@ compactação). O código da POC 001 (`_poc/`, ignorado pelo git) é referência
       (lista fixa e Jev), a regra 3 (ignorar e esperar) e os argumentos dos 6 sites e das duas direções.
 - [x] 3. Fim da frase: `frase.js` com relógio falso. Fim: os testes cobrem frase completa, pausa com retomada,
       desistência depois de 3 s e confirmação com "sim", com "não" e com silêncio.
-- [ ] 4. Leitura e ação na página: `leitura.js`, `agir.js` e `leitura.test.js` no Chromium. Fim: 0 valores plantados no
+- [x] 4. Leitura e ação na página: `leitura.js`, `agir.js` e `leitura.test.js` no Chromium. Fim: 0 valores plantados no
       resultado (CA-03), no máximo 100 elementos, viewport primeiro, shadow root e iframe da mesma origem lidos,
       duplicados removidos e clique por ID funcionando.
 - [ ] 5. Log: `log.js`, `proxy/log.js`, teste e `no-console`. Fim: o teste prova que frase e conteúdo são descartados, e

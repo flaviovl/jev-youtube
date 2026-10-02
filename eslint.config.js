@@ -11,6 +11,6 @@ export default [
   { files: ['src/log.js', 'proxy/log.js'], rules: { 'no-console': 'off' } },
   { files: ['src/**/*.js'], languageOptions: { globals: { ...globals.browser, ...globals.webextensions } } },
   { files: ['proxy/**/*.js', 'scripts/**/*.js', 'tests/**/*.js', '*.config.js'], languageOptions: { globals: globals.node } },
-  // O e2e roda trechos dentro do Chromium com page.evaluate, onde existem as APIs do navegador e da extensão.
-  { files: ['tests/e2e/**/*.js'], languageOptions: { globals: { ...globals.browser, ...globals.webextensions } } },
+  // Estes testes rodam trechos dentro do Chromium com page.evaluate, onde existem as APIs do navegador e da extensão.
+  { files: ['tests/e2e/**/*.js', 'tests/leitura.test.js'], languageOptions: { globals: { ...globals.browser, ...globals.webextensions } } },
 ]
