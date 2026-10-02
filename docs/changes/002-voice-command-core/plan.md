@@ -85,7 +85,7 @@ compactação). O código da POC 001 (`_poc/`, ignorado pelo git) é referência
 - [x] 10. Roteiro falado e latência: o engenheiro fala e o Claude registra só métricas. Fim: `attachments/ca05-roteiro.md`
       com os 5 cenários nos 6 sites e na página de teste, com clique real, "sim" e "não", e `attachments/ca06-latencia.md`
       com p50 ≤ 2 s em ≥ 10 falas (CA-05, CA-06).
-- [ ] 11. Verificação final: subagente verifier, mais `npm test`, `npm run lint` e `npm run e2e`.
+- [x] 11. Verificação final: subagente verifier, mais `npm test`, `npm run lint` e `npm run e2e`.
 
 ## Riscos
 
@@ -140,3 +140,14 @@ compactação). O código da POC 001 (`_poc/`, ignorado pelo git) é referência
   para "abre o youtube"); Wikipédia, g1, Mercado Livre e GitHub ficaram sem roteiro falado. A latência usa as 18 ações
   feitas por voz (6 de "clica em entrar" na página de teste, em vez de 10). Para o roteiro, o painel ganhou o histórico
   da sessão em memória, sem a frase, com o botão "Copiar resultados".
+- 2026-10-01, passo 11, achados do verifier corrigidos com teste antes da correção:
+  - a confirmação aceitava "sim" em qualquer ponto da resposta ("não, sim"); agora a resposta inteira precisa ser
+    "sim" (`src/sidepanel/frase.js`, `tests/frase.test.js`);
+  - um link dentro de campo editável enviava destino e `title` ao Jev; agora nada dentro de `contenteditable` entra na
+    leitura, só o campo com o rótulo dele (`src/pagina/leitura.js`, fixture e `tests/leitura.test.js`);
+  - o service worker executava a ação ao decidir, e um pedaço de frase já enviado podia agir antes de a pessoa
+    terminar de falar; agora ele só devolve a decisão e o pedido pendente, e o painel pede a execução se a frase ainda
+    for a atual (`src/background/service-worker.js`, `src/sidepanel/sidepanel.js`, `tests/e2e/comando.test.js`).
+- 2026-10-01, arquivos fora da lista: `src/rules/texto.js` (normalização compartilhada pelas regras), `tests/relogio.js`
+  (relógio falso dos testes) e `package-lock.json`. O manifest não declara `commands` como permissão, porque o Chrome
+  não tem essa permissão; o atalho fica na chave `commands` do manifest.

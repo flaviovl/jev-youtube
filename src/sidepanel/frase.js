@@ -70,7 +70,8 @@ export function criarConfirmacao({ agendar, concluir, limiares = LIMIARES }) {
     },
     fimDaFala() {
       if (!texto) return fim('silencio')
-      fim(/\bsim\b/.test(normalizar(texto)) ? 'sim' : 'nao')
+      // A resposta inteira precisa ser "sim": "não, sim" ou "não sei se sim" cancelam.
+      fim(/^(sim\W*)+$/.test(normalizar(texto)) ? 'sim' : 'nao')
     },
   }
 }

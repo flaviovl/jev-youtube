@@ -81,11 +81,11 @@ async function comando(frase, abaId) {
       elemento: { id: elemento.escolha, nome: nomeElemento },
       tempos: { leituraMs: Math.round(t1 - t0), jevMs: jev.ms, servidorMs: Math.round(t2 - t1) },
     }
-    const pendente = { abaId, intencao: intencao.escolha, elementoId: elemento.escolha, frase }
     registrar('comando-decidido', { decisao, intencao: intencao.escolha, comando, terminou, perigoso, ...base.tempos })
-    if (decisao === 'confirmar') return { ...base, pendente }
-    if (decisao !== 'executar') return base
-    return { ...base, ...(await executarMedindo(pendente)) }
+    if (decisao !== 'executar' && decisao !== 'confirmar') return base
+    // Nada executa aqui: o painel pede a execução só se a frase ainda for a atual (a pessoa pode ter continuado
+    // falando) e, na ação perigosa, só depois do "sim".
+    return { ...base, pendente: { abaId, intencao: intencao.escolha, elementoId: elemento.escolha, frase } }
   } catch (e) {
     registrar('comando-falhou', { erro: e.codigo ?? 'falha-interna' })
     throw e

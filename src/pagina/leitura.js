@@ -112,6 +112,9 @@ export function lerPagina() {
     for (const el of raiz.querySelectorAll(SELETOR)) {
       if (vistos.has(el)) continue
       vistos.add(el)
+      // Dentro de um campo editável tudo é conteúdo da pessoa (um link digitado num rascunho, por exemplo): só o campo
+      // entra, com o rótulo dele.
+      if (el.parentElement?.closest('[contenteditable]:not([contenteditable=false])')) continue
       if (!visivel(el)) continue
       const r = el.getBoundingClientRect()
       const top = r.top + dy

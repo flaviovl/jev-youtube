@@ -101,7 +101,8 @@ async function falar() {
       } catch {
         r = { decisao: 'erro', erro: 'falha-interna' }
       }
-      // Da última mudança do texto até a ação feita (POC 001: o speechend não dispara no modo contínuo).
+      // Da última mudança do texto até a decisão; na execução, recalculado até a ação feita (POC 001: o speechend não
+      // dispara no modo contínuo).
       r.totalMs = Math.round(performance.now() - ultimaMudanca)
       ultimaResposta = r
       frase.resposta(texto, r.decisao)
@@ -111,6 +112,12 @@ async function falar() {
       fala?.parar()
       const r = ultimaResposta
       if (motivo === 'executar') {
+        try {
+          Object.assign(r, await chrome.runtime.sendMessage({ tipo: 'executar', pendente: r.pendente }))
+        } catch {
+          Object.assign(r, { decisao: 'erro', erro: 'falha-interna' })
+        }
+        r.totalMs = Math.round(performance.now() - ultimaMudanca)
         mostrarResultado(r)
         if (r.resultado?.ok) tempos.push(r.totalMs)
         registrar('comando-concluido', { decisao: motivo, totalMs: r.totalMs, ...r.tempos })

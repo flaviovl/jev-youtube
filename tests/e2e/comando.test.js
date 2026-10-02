@@ -75,11 +75,16 @@ async function abrirAba(url) {
 }
 const mandar = (msg) => painel.evaluate((m) => chrome.runtime.sendMessage(m), msg)
 
-test('"clica em entrar" clica de verdade no botão Entrar', async () => {
+// O painel só pede a execução se a frase ainda for a atual: o comando não age sozinho, senão um pedaço de frase já
+// enviado executaria antes de a pessoa terminar de falar.
+test('"clica em entrar" decide executar e clica de verdade só no pedido de execução', async () => {
   const { pagina, abaId } = await abrirAba(fixture)
   const r = await mandar({ tipo: 'comando', frase: 'clica em entrar', abaId })
   assert.equal(r.decisao, 'executar')
-  assert.deepEqual(r.resultado, { acao: 'clicar', ok: true })
+  assert.equal(r.resultado, undefined)
+  assert.match(await pagina.textContent('#status'), /Nenhum clique ainda/)
+  const e = await mandar({ tipo: 'executar', pendente: r.pendente })
+  assert.deepEqual(e.resultado, { acao: 'clicar', ok: true })
   assert.match(await pagina.textContent('#status'), /Clicou em: Entrar/)
   await pagina.close()
 })
@@ -107,7 +112,8 @@ test('conversa é ignorada e nada acontece na página', async () => {
 test('"rola para baixo" rola a página', async () => {
   const { pagina, abaId } = await abrirAba(fixture)
   const r = await mandar({ tipo: 'comando', frase: 'rola para baixo', abaId })
-  assert.deepEqual(r.resultado, { acao: 'rolar', ok: true })
+  const e = await mandar({ tipo: 'executar', pendente: r.pendente })
+  assert.deepEqual(e.resultado, { acao: 'rolar', ok: true })
   assert.ok((await pagina.evaluate(() => scrollY)) > 0)
   await pagina.close()
 })

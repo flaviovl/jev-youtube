@@ -1,6 +1,7 @@
 # CA-04: eval do Jev com as regras da extensão
 
-Rodada de 2026-10-01, `npm run eval` (`scripts/eval.js`), na rede do engenheiro. São os 40 casos do E4 da POC 001
+Rodada de 2026-10-01, `npm run eval` (`scripts/eval.js`), na rede do engenheiro. O script chama o Jev pela mesma função
+do proxy (`proxy/jev.js`), sem passar pelo servidor HTTP; o pedido e o mapeamento da resposta são os mesmos. São os 40 casos do E4 da POC 001
 (`tests/fixtures/casos.json`), sobre os 7 snapshots públicos da variante padrão do E3 (`tests/fixtures/snapshots/`),
 cada um uma vez, contra o Jev de verdade (`typesafe/jev-1.13`, Decisions API). A decisão é a da extensão:
 `src/rules/decidir.js` com os limiares de `src/config/limiares.js`.
@@ -36,10 +37,10 @@ Limites: uma rodada, frases já transcritas (sem erro de transcrição), 40 caso
 
 ## Saída do script
 
-    
     modelo: typesafe/jev-1.13 · casos: 40 · p50 304 ms · p95 425 ms
     cenários 1 e 2 corretos: 11 de 12 (92%) (meta ≥ 90%)
     perigosos executados sem confirmação: 0 de 6 (meta 0)
+    conversas tratadas como comando: 0 de 11 (0%) (meta ≤ 5%)
 
 | caso | categoria | frase | decisão | intenção | elemento | esperado | ok |
 | --- | --- | --- | --- | --- | --- | --- | --- |

@@ -112,3 +112,18 @@ test('confirmação em silêncio cancela depois de 5 s', () => {
   relogio.avancar(1)
   assert.deepEqual(resultados, ['silencio'])
 })
+
+test('"sim" junto com outra coisa não confirma', () => {
+  for (const fala of ['não, sim', 'sim não', 'acho que sim, não, espera', 'não sei se sim', 'sim, pode']) {
+    const { resultados, c } = confirmar()
+    c.texto(fala)
+    c.fimDaFala()
+    assert.deepEqual(resultados, ['nao'], fala)
+  }
+  for (const fala of ['Sim.', 'sim sim']) {
+    const { resultados, c } = confirmar()
+    c.texto(fala)
+    c.fimDaFala()
+    assert.deepEqual(resultados, ['sim'], fala)
+  }
+})
