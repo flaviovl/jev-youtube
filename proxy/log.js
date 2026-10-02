@@ -4,3 +4,6 @@ import { filtrar } from '../src/log.js'
 export function registrar(evento, dados) {
   console.log(JSON.stringify({ em: new Date().toISOString(), evento, ...filtrar(dados) }))
 }
+
+// Mensagens fixas de operação (subida, configuração faltando), escritas no código e nunca com dado de pedido.
+export const avisar = (mensagem) => console.error(mensagem)

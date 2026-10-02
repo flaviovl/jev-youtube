@@ -72,7 +72,7 @@ compactação). O código da POC 001 (`_poc/`, ignorado pelo git) é referência
       duplicados removidos e clique por ID funcionando.
 - [x] 5. Log: `log.js`, `proxy/log.js`, teste e `no-console`. Fim: o teste prova que frase e conteúdo são descartados, e
       o lint falha com um `console.log` fora do log.
-- [ ] 6. Proxy: `server.js` e `jev.js` com um Jev falso local. Fim: `proxy.test.js` prova 403 sem `Origin` e com outra
+- [x] 6. Proxy: `server.js` e `jev.js` com um Jev falso local. Fim: `proxy.test.js` prova 403 sem `Origin` e com outra
       origem, 200 com a `Origin` da extensão, o mapeamento da resposta e o tempo limite (CA-07); `grep -r OPENROUTER src/`
       não acha nada (CA-08).
 - [ ] 7. Orquestração: `service-worker.js` e `acoes.js`. Fim: `npm run e2e` com o Jev falso prova clique real na
