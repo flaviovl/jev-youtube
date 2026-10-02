@@ -1,3 +1,10 @@
+.env
+
+/draft
+_*
+
 # Configuração local do Claude Code e a trava de testes do /sdlc-bugfix não são versionadas.
 .claude/settings.local.json
 .claude/.tests-locked
+# Chaves locais (OpenRouter da POC 001).
+.env

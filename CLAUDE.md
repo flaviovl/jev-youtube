@@ -8,10 +8,6 @@ Navegador por voz: o usuário fala um comando em pt-BR ("abre o youtube", "clica
 na página aberta. Visão, princípios e restrições que valem para todo item, métricas, riscos e glossário (Jev, quiz,
 limiares) estão em `docs/product/vision.md`; o diagrama da solução completa, em `docs/product/navegador-por-voz.svg`.
 
-Estado em 2026-09-30: só existem o kit de processo SDLC, o `vision.md` do produto e o intent do item 001, uma POC de
-viabilidade (`docs/changes/001-feasibility-poc/`), ambos em draft. Não há código nem `package.json`. Formato do produto
-(extensão com content script é a hipótese), API de transcrição e o que é o Jev são perguntas em aberto no `vision.md`.
-
 ## Comandos
 
 Ainda não existem (Build, Teste, Lint, Rodar local). Preencha esta seção e "Verificando seu trabalho" quando o
