@@ -6,7 +6,7 @@ Mesma rodada do `ca05-roteiro.md` (2026-10-01). O tempo vai da última mudança 
 | Conjunto                                         | n  | p50      | p95      | Máximo   |
 | ------------------------------------------------ | -- | -------- | -------- | -------- |
 | Todas as ações executadas por voz                | 18 | 1.083 ms | 1.201 ms | 1.201 ms |
-| "clica em entrar" na página de teste             | 6  | 1.162 ms | 1.201 ms | 1.201 ms |
+| "clica em entrar" na página de teste             | 6  | 1.053 ms | 1.201 ms | 1.201 ms |
 
 Valores das 6 de "clica em entrar": 1.053, 1.162, 1.189, 990, 990 e 1.201 ms. As 18 incluem cliques, rolagens, voltar,
 abrir site e buscar, na página de teste, no YouTube e no Google.
