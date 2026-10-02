@@ -54,5 +54,5 @@ Estado atual:
 
 Resuma em 5 linhas: requisitos principais, risco, áreas de preocupação que precisam de dono de política. Depois siga o
 portão de `${CLAUDE_PROJECT_DIR}/.claude/skills/sdlc/references/portao.md`: artefato `spec.md`; próxima etapa
-`/sdlc-plan <NNN>` (lembre que o ideal é plan mode, Shift+Tab); commit `spec: <título>`. Com risco alto, diga quem
+`/sdlc-plan <NNN>` (lembre que o ideal é plan mode, Shift+Tab). Com risco alto, diga quem
 mais precisa concordar antes de aprovar.

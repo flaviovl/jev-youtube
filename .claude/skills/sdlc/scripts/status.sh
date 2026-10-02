@@ -111,17 +111,6 @@ detalhe() { # pasta
   echo "Intent: $(status_of "$d/intent.md") · Spec: $(status_of "$d/spec.md") · Plan: $(status_of "$d/plan.md") · Passos do build: $feitos/$total"
   echo "Estado: $e"
   echo "Próxima ação: $acao (quem: $quem)"
-  if git -C "$root" rev-parse --git-dir >/dev/null 2>&1; then
-    local last na_main=não pend
-    last=$(git -C "$root" log -1 --format='%h %ad %s' --date=short -- "$changes_rel/$base" 2>/dev/null)
-    # O item chegou à main quando o último commit da pasta dele está nela (fluxo develop → main).
-    git -C "$root" merge-base --is-ancestor "${last%% *}" main 2>/dev/null && na_main=sim
-    pend=$(git -C "$root" status --porcelain -- "$changes_rel/$base" 2>/dev/null | awk -v p="$changes_rel/$base/" \
-      '{f=$2; if (index(f, p) == 1) f = substr(f, length(p) + 1); print (f == "" ? "pasta inteira" : f)}' | tr '\n' ' ')
-    [ -n "$last" ] && echo "Na main: $na_main"
-    echo "Último commit na pasta: ${last:-nenhum}"
-    echo "Não commitado: ${pend:-nada}"
-  fi
   [ -f "$d/origin.md" ] && echo "Origem (entrada do backlog): $changes_rel/$base/origin.md"
   [ -f "$d/findings.md" ] && echo "Findings: $changes_rel/$base/findings.md"
   [ -f "$d/review.md" ] && echo "Review: $changes_rel/$base/review.md ($(grep -c '^## Rodada' "$d/review.md") rodada(s))"

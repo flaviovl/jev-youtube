@@ -2,7 +2,7 @@ import { normalizar } from './texto.js'
 
 // Lista fixa de ações perigosas (skill seguranca-acoes-voz, regra 1): basta ela OU o Jev marcar.
 // São formas verbais inteiras, e não prefixos: "pag" ou "exclu" pegariam "página" e "exclusivas".
-// Além dos verbos da skill, entram sinônimos que a POC 001 mostrou faltar ("manda a mensagem").
+// Além dos verbos da skill, entram sinônimos que o Jev deixou no limite em teste ("manda a mensagem").
 const PERIGO = new RegExp(
   [
     '\\bcompr(ar|a|e|o|ou|ei)\\b',

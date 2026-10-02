@@ -1,4 +1,4 @@
-// Proxy local: o único lugar com a chave do OpenRouter (spec 002, seção 4.1). Escuta só em 127.0.0.1 e só atende a
+// Proxy local: o único lugar com a chave do OpenRouter (docs/arquitetura.md, Segurança). Escuta só em 127.0.0.1 e só atende a
 // extensão: página nenhuma consegue falsificar o cabeçalho Origin, então um site aberto não gasta a chave.
 // Uso: npm run proxy (lê o .env).
 import { createServer } from 'node:http'

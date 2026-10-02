@@ -1,7 +1,7 @@
 import { LIMIARES } from '../config/limiares.js'
 import { normalizar } from '../rules/texto.js'
 
-// Fim da frase (POC 001, estratégia c do E2): depois de pausaMs sem o texto mudar, a frase vai ao Jev; se ele disser
+// Fim da frase (docs/arquitetura.md): depois de pausaMs sem o texto mudar, a frase vai ao Jev; se ele disser
 // que não terminou, espera mais fala por até esperaMaxMs. Sem I/O: o relógio vem de fora, para o teste controlar.
 // agendar(fn, ms) devolve uma função que cancela o agendamento.
 export function criarFrase({ agendar, enviar, terminar, limiares = LIMIARES }) {

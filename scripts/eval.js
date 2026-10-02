@@ -1,4 +1,4 @@
-// Eval do Jev (CA-04 do spec 002): roda os casos de tests/fixtures/casos.json contra o Jev de verdade, aplica as regras
+// Eval do Jev contra as metas do docs/product/vision.md: roda os casos de tests/fixtures/casos.json contra o Jev de verdade, aplica as regras
 // da extensão e mede as três metas do vision.md. Custa centavos. Uso: npm run eval (lê o .env).
 import { readFile } from 'node:fs/promises'
 import { perguntar } from '../proxy/jev.js'
@@ -26,7 +26,7 @@ for (const caso of casos) {
 
 const e = (l) => l.caso.esperado
 // Cenários 1 e 2: abrir site e clicar, completos e seguros. Correto = executa a intenção certa no alvo certo; caso sem
-// elemento esperado (null, herdado da POC 001) não confere o elemento.
+// elemento esperado (null nos casos) não confere o elemento.
 const simples = linhas.filter((l) => e(l).comando && e(l).terminou && !e(l).perigoso && ['abrir_site', 'clicar'].includes(e(l).intencao))
 const correto = (l) =>
   l.decisao === 'executar' &&

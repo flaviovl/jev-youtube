@@ -1,6 +1,6 @@
 import { normalizar } from './texto.js'
 
-// O Jev não devolve texto (POC 001, E4): site, direção e termo de busca saem da própria frase.
+// O Jev não devolve texto livre: site, direção e termo de busca saem da própria frase.
 
 const SITES = [
   [/\byoutube\b/, 'https://www.youtube.com/'],

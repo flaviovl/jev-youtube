@@ -1,5 +1,5 @@
 // Lê a página aberta: até 100 elementos acionáveis, sem nenhum valor digitado ou escolhido (skill
-// seguranca-acoes-voz, regra 2). Regras do E3 da POC 001.
+// seguranca-acoes-voz, regra 2). Critérios em docs/arquitetura.md, Leitura da página.
 // É injetada na aba por chrome.scripting.executeScript({ func }), que serializa só o corpo da função: tudo o que ela
 // usa precisa estar aqui dentro.
 export function lerPagina() {
@@ -148,7 +148,7 @@ export function lerPagina() {
       destino: destino(el),
       noViewport,
     }
-    // O mesmo nome, papel e destino aparece uma vez só: libera vagas e tira a ambiguidade (POC 001, E3).
+    // O mesmo nome, papel e destino aparece uma vez só: libera vagas e tira a ambiguidade.
     const chave = [item.role ?? PAPEL_IMPLICITO[el.tagName] ?? item.tag, item.nome, item.destino].join('|')
     if (item.nome && chaves.has(chave)) continue
     chaves.add(chave)

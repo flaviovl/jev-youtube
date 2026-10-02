@@ -55,7 +55,8 @@ antes, sugira adicioná-lo a "Coisas que o Claude erra" no `CLAUDE.md`.
 
 - Rodando local: acrescente a rodada no fim de `<pasta do item>/review.md`, criando o arquivo a partir de
   `${CLAUDE_SKILL_DIR}/assets/review.md` se ele não existir. Numere a rodada, com data e o commit revisado
-  (`git rev-parse --short HEAD`). Commit do `review.md` e das correções que vierem dele, só se o humano disser sim.
+  (`git rev-parse --short HEAD`). O `review.md` fica local, como toda `docs/changes/`; commit só das correções de
+  código que vierem dele, com o sim do humano.
 - Quando o pedido for postar no PR (é o caso do CI), não grave arquivos: poste os achados como comentários.
 
 Depois, com o sim do humano, a `develop` vai para a `main` (`${CLAUDE_PROJECT_DIR}/.claude/skills/sdlc/references/git.md`)

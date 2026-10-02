@@ -26,8 +26,7 @@ Pedido: $ARGUMENTS
 
 Esta skill não executa etapas. Ela responde sobre o ciclo a partir do estado acima e, quando a próxima ação é do Claude,
 invoca a skill da etapa. As etapas também podem ser chamadas direto (`/sdlc-spec 001`) e conferem o estado sozinhas pelo
-mesmo script. Para o detalhe de um item (tipo, branch, último commit, o que falta commitar, origem, findings,
-attachments), rode `${CLAUDE_SKILL_DIR}/scripts/status.sh <NNN>`.
+mesmo script. Para o detalhe de um item (tipo, estado, origem, findings, attachments), rode `${CLAUDE_SKILL_DIR}/scripts/status.sh <NNN>`.
 
 ## O ciclo
 
@@ -46,6 +45,8 @@ alerta ou incidente ─▶ intent novo (sdlc-incident)
   esperam por ele.
 - `docs/backlog/`: um arquivo por ideia, problema ou bug que ainda não virou trabalho. Sem aprovação. Quando vira item,
   o arquivo é movido para a pasta do item como `origin.md`; quando é descartado, é apagado e o motivo é dito na conversa.
+- `docs/changes/` e `docs/backlog/` são o histórico local do trabalho e ficam fora do git
+  (`${CLAUDE_SKILL_DIR}/references/git.md`). O que precisar durar no repositório vira um documento próprio.
 - `docs/changes/NNN-slug/`: uma pasta por item, com `origin.md` (se veio do backlog), `intent.md`, `spec.md` (só
   feature), `plan.md`, `findings.md` (só poc), `review.md` (feature e bug, uma rodada por review) e `attachments/`.
 
@@ -80,7 +81,7 @@ escrever o `docs/product/vision.md` antes e, com o ok, invoque `sdlc-product`. `
 ele não estiver aprovado e quantas entradas há no backlog. Para cada item pedido, diga o tipo, a fase, se está concluído
 e a próxima ação com quem a faz. Ao retomar um item, rode `${CLAUDE_SKILL_DIR}/scripts/status.sh <NNN>` e leia o
 artefato da fase atual (e "Desvios" do plan, se o build começou) para dizer em uma ou duas linhas o que falta de fato,
-não só o Status. O que está sem commit é só informação: a aprovação vale pelo `Status` no arquivo.
+não só o Status. A aprovação vale pelo `Status` no arquivo.
 
 ### seguir
 
@@ -138,7 +139,7 @@ fase reaberta.
 "Foi pro ar", "mergeou", "pode fechar o 001". Só com a sua confirmação de que a entrega aconteceu: a `develop` com o
 item chegou à `main` numa feature ou num bug; numa poc, `findings.md` escrito e as respostas levadas ao `docs/product/vision.md`. Se o estado não
 for "Em review", "Revisado" nem "POC terminada", diga o que falta e pergunte se quer concluir mesmo assim. Troque
-`Status: approved` por `Status: done` no `plan.md` e pergunte se commita (portão, "Commit?").
+`Status: approved` por `Status: done` no `plan.md`.
 
 ## Referência
 

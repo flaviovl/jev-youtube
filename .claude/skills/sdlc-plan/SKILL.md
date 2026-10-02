@@ -58,6 +58,6 @@ opções existem. Itere até que um engenheiro novo consiga implementar só com 
 ## Ao final
 
 Siga o portão de `${CLAUDE_PROJECT_DIR}/.claude/skills/sdlc/references/portao.md`: artefato `plan.md`; próxima etapa
-`/sdlc-build <NNN>`; commit `plan: <título>`. Em plan mode, a pergunta de aprovação é o ExitPlanMode: aceito, ele vale
+`/sdlc-build <NNN>`. Em plan mode, a pergunta de aprovação é o ExitPlanMode: aceito, ele vale
 como "Aprovar"; então grave `plan.md` com `Status: approved`, `Aprovado por: <nome>` e a data, e faça só as perguntas
-que faltam (seguir ou parar, e commit).
+que faltam (seguir ou parar).

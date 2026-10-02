@@ -1,4 +1,4 @@
-// Pedido ao Jev pela Decisions API do OpenRouter: o quiz do vision.md como perguntas tipadas (POC 001, E4).
+// Pedido ao Jev pela Decisions API do OpenRouter: o quiz do vision.md como perguntas tipadas (docs/arquitetura.md, Jev).
 export const URL_JEV = 'https://openrouter.ai/api/alpha/decisions'
 
 const INTENCOES = {

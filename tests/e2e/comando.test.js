@@ -6,7 +6,7 @@ import { abrirComExtensao } from './chromium.js'
 import { criarServidor } from '../../proxy/server.js'
 
 // Caminho inteiro sem voz: página do painel → service worker → leitura na aba → proxy de verdade → Jev falso → regras
-// → ação. O Jev falso responde pela frase, como o Jev real respondeu na POC 001.
+// → ação. O Jev falso responde pela frase, no formato do Jev real.
 const PORTA_PROXY = 8787
 const JEV = {
   'clica em entrar': { intencao: 'clicar', alvo: 'Entrar', comando: 0.86, terminou: 0.82, perigoso: 0.05 },

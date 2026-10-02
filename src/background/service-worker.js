@@ -3,7 +3,7 @@ import { lerPagina } from '../pagina/leitura.js'
 import { registrar } from '../log.js'
 import { executar } from './acoes.js'
 
-// Frase → leitura da aba → Jev (pelo proxy local, que guarda a chave) → regras → ação (spec 002, seção 4.1).
+// Frase → leitura da aba → Jev (pelo proxy local, que guarda a chave) → regras → ação (docs/arquitetura.md).
 const PROXY = 'http://127.0.0.1:8787/jev'
 const TEMPO_PROXY_MS = 3500
 

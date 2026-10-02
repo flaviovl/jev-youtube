@@ -26,7 +26,7 @@ Estado atual:
   (plano sem checklist)". Em qualquer outro estado, pare e diga o estado e a próxima ação que a tabela mostra.
 - Leia `intent.md`, `spec.md` e `plan.md` da pasta do item, o `CLAUDE.md` e as skills de política aplicáveis.
 - Trabalhe na `develop`, sem branch por item (`${CLAUDE_PROJECT_DIR}/.claude/skills/sdlc/references/git.md`). Rode
-  `${CLAUDE_PROJECT_DIR}/.claude/skills/sdlc/scripts/status.sh <NNN>` para ver o último commit e o que falta commitar.
+  `${CLAUDE_PROJECT_DIR}/.claude/skills/sdlc/scripts/status.sh <NNN>` para ver o estado do item.
 - Se o build já começou, continue do primeiro passo sem `[x]`; leia "Desvios" antes.
 
 ## Implementação
@@ -54,8 +54,7 @@ critério de aceitação do spec, não é desvio: pare e sugira voltar ao spec (
 O código é descartável e fica fora do git, numa pasta ignorada (`_poc/`). O ciclo de feedback de cada passo é a medição da Prova, não
 build, testes e lint de produção. No estado "Escrever findings", grave `findings.md` na pasta do item a partir de
 `${CLAUDE_SKILL_DIR}/assets/findings.md`: uma seção por pergunta do intent, com resposta, evidência e impacto. Pule o
-verifier e o review. A pasta do item (plan marcado, `findings.md`, `attachments/`) vai num commit na `develop`, se o
-humano disser sim; o código da POC nunca é commitado.
+verifier e o review. A pasta do item e o código da POC ficam fora do git.
 Ideias que surgirem vão para `docs/backlog/` (skill `sdlc`, operação `anotar`). Próximo: levar as respostas ao
 `docs/product/vision.md` (skill `sdlc`, operação `detalhe`) e `/sdlc concluir <NNN>`.
 
@@ -68,7 +67,9 @@ Corrija o que ele apontar e rode de novo.
 
 - Cole a saída final de build, testes e lint.
 - Mapeie cada critério de aceitação do spec para o teste ou evidência que o prova.
-- Pergunte se o Claude commita o que falta na `develop`. Push só com o sim. PR `develop` → `main` é opcional; se o
+- Pergunte se o Claude commita o código que falta na `develop` (a pasta do item fica fora do git). Se o item trouxe
+  algo que quem lê o código precisa saber (como rodar, uma decisão de arquitetura), proponha um documento próprio no
+  repositório. Push só com o sim. PR `develop` → `main` é opcional; se o
   humano quiser, use `.github/PULL_REQUEST_TEMPLATE.md`.
 - Próximo: `/sdlc-review <NNN>` (diff `main...develop`). Depois, com o sim do humano, levar a `develop` para a `main`
   (`${CLAUDE_PROJECT_DIR}/.claude/skills/sdlc/references/git.md`) e `/sdlc concluir <NNN>`.

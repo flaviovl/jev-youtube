@@ -59,6 +59,8 @@ Nenhuma registrada ainda. Quando um achado de review se repetir pela segunda vez
   POC (`Tipo: poc`): `intent.md` → `plan.md` → `findings.md`, código descartável. Bug (`Tipo: bug`, `/sdlc-bugfix`):
   `intent.md` → `plan.md` test-first. Feature e bug terminam com `review.md` (uma rodada por review). Material de apoio
   do item em `attachments/`. Templates ficam nas skills (`.claude/skills/sdlc*/assets/`).
+- `docs/changes/` e `docs/backlog/` são o histórico local do trabalho e não vão para o git; documentação que precise
+  durar no repositório vira um documento próprio (`README`, `docs/<tema>.md`).
 - Ideia, problema ou bug que surgir no meio de qualquer trabalho ou pesquisa vira um arquivo em `docs/backlog/`
   (`/sdlc anotar`); não amplie o item em andamento. Ao virar trabalho, a entrada vai para a pasta do item como
   `origin.md`.

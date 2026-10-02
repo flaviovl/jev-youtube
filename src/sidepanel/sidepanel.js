@@ -102,8 +102,8 @@ async function falar() {
       } catch {
         r = { decisao: 'erro', erro: 'falha-interna' }
       }
-      // Da última mudança do texto até a decisão; na execução, recalculado até a ação feita (POC 001: o speechend não
-      // dispara no modo contínuo).
+      // Da última mudança do texto até a decisão; na execução, recalculado até a ação feita (o speechend não dispara
+      // no modo contínuo).
       r.totalMs = Math.round(performance.now() - ultimaMudanca)
       ultimaResposta = r
       frase.resposta(texto, r.decisao)

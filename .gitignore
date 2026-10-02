@@ -6,7 +6,11 @@ _*
 # Configuração local do Claude Code e a trava de testes do /sdlc-bugfix não são versionadas.
 .claude/settings.local.json
 .claude/.tests-locked
-# Chaves locais (OpenRouter da POC 001).
+# Chaves locais (OpenRouter).
 .env
 
 node_modules/
+
+# Histórico local do trabalho (intent, spec, plan, findings, review, backlog): fora do git.
+docs/changes/
+docs/backlog/

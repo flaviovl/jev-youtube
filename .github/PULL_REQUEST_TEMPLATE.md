@@ -1,8 +1,6 @@
 ## Item SDLC
-- Intent: `docs/changes/<NNN>-<slug>/intent.md`
-- Spec: `docs/changes/<NNN>-<slug>/spec.md` (só feature)
-- Plan: `docs/changes/<NNN>-<slug>/plan.md`
-- Review: `docs/changes/<NNN>-<slug>/review.md` (se o review rodou local)
+- Item: `<NNN>-<slug>` (intent, spec, plan e review ficam em `docs/changes/`, local, fora do git)
+- Documentação durável que mudou: <README, docs/<tema>.md, ou "nenhuma">
 
 ## O que muda
 <resumo em 2–3 linhas>

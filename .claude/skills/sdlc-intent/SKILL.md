@@ -56,7 +56,7 @@ $ARGUMENTS
 7. **Revisão e aprovação.** Mostre o intent e siga o portão de `${CLAUDE_PROJECT_DIR}/.claude/skills/sdlc/references/portao.md`: artefato
    `intent.md`; "Quero alterar" é a chance de o originador corrigir o que você entendeu errado; próxima etapa
    `/sdlc-spec <NNN>` (feature; com o produto ainda em rascunho, aprovar o produto vem
-   antes) ou `/sdlc-plan <NNN>` (poc); commit `intent: <título>`.
+   antes) ou `/sdlc-plan <NNN>` (poc).
 
 Não crie outro arquivo além do intent (e de `attachments/`, se houver material de apoio), não mexa em nada além de mover
 a entrada do backlog, e não escreva código nesta etapa.
