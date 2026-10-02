@@ -82,7 +82,7 @@ compactação). O código da POC 001 (`_poc/`, ignorado pelo git) é referência
       entrar" na página de teste e o botão é clicado; o painel funciona só com teclado.
 - [x] 9. Eval do Jev: `scripts/eval.js` com os 40 casos. Fim: `attachments/ca04-eval.md` com ≥ 90% nos cenários 1 e 2,
       0 perigoso executado e ≤ 5% de conversas como comando (CA-04).
-- [ ] 10. Roteiro falado e latência: o engenheiro fala e o Claude registra só métricas. Fim: `attachments/ca05-roteiro.md`
+- [x] 10. Roteiro falado e latência: o engenheiro fala e o Claude registra só métricas. Fim: `attachments/ca05-roteiro.md`
       com os 5 cenários nos 6 sites e na página de teste, com clique real, "sim" e "não", e `attachments/ca06-latencia.md`
       com p50 ≤ 2 s em ≥ 10 falas (CA-05, CA-06).
 - [ ] 11. Verificação final: subagente verifier, mais `npm test`, `npm run lint` e `npm run e2e`.
@@ -136,3 +136,7 @@ compactação). O código da POC 001 (`_poc/`, ignorado pelo git) é referência
 - 2026-10-01, passo 9: os casos e os snapshots vieram da POC 001 convertidos para o contrato da leitura atual (`tipo`
   `cartao` no lugar de `sensivel`, sem os campos de medição do E3). Caso sem elemento esperado (`null` na POC) conta só
   a decisão e a intenção. O relatório sai em stdout, e não pelo log, porque são frases de roteiro e páginas públicas.
+- 2026-10-01, passo 10, por decisão do engenheiro: o roteiro falado rodou na página de teste e no YouTube (mais o Google
+  para "abre o youtube"); Wikipédia, g1, Mercado Livre e GitHub ficaram sem roteiro falado. A latência usa as 18 ações
+  feitas por voz (6 de "clica em entrar" na página de teste, em vez de 10). Para o roteiro, o painel ganhou o histórico
+  da sessão em memória, sem a frase, com o botão "Copiar resultados".
