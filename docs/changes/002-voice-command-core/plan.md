@@ -70,7 +70,7 @@ compactação). O código da POC 001 (`_poc/`, ignorado pelo git) é referência
 - [x] 4. Leitura e ação na página: `leitura.js`, `agir.js` e `leitura.test.js` no Chromium. Fim: 0 valores plantados no
       resultado (CA-03), no máximo 100 elementos, viewport primeiro, shadow root e iframe da mesma origem lidos,
       duplicados removidos e clique por ID funcionando.
-- [ ] 5. Log: `log.js`, `proxy/log.js`, teste e `no-console`. Fim: o teste prova que frase e conteúdo são descartados, e
+- [x] 5. Log: `log.js`, `proxy/log.js`, teste e `no-console`. Fim: o teste prova que frase e conteúdo são descartados, e
       o lint falha com um `console.log` fora do log.
 - [ ] 6. Proxy: `server.js` e `jev.js` com um Jev falso local. Fim: `proxy.test.js` prova 403 sem `Origin` e com outra
       origem, 200 com a `Origin` da extensão, o mapeamento da resposta e o tempo limite (CA-07); `grep -r OPENROUTER src/`
