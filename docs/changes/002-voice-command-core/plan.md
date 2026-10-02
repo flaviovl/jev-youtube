@@ -63,7 +63,7 @@ compactação). O código da POC 001 (`_poc/`, ignorado pelo git) é referência
 
 - [x] 1. Esqueleto: `package.json`, `eslint.config.js`, manifest mínimo, `.env.example` e comandos no `CLAUDE.md`. Fim:
       `npm test` e `npm run lint` saem com 0, e a extensão carrega sem erro em `chrome://extensions`.
-- [ ] 2. Regras: `limiares.js`, `perigo.js`, `decidir.js`, `argumento.js` e testes. Fim: os testes cobrem a regra 1
+- [x] 2. Regras: `limiares.js`, `perigo.js`, `decidir.js`, `argumento.js` e testes. Fim: os testes cobrem a regra 1
       (lista fixa e Jev), a regra 3 (ignorar e esperar) e os argumentos dos 6 sites e das duas direções.
 - [ ] 3. Fim da frase: `frase.js` com relógio falso. Fim: os testes cobrem frase completa, pausa com retomada,
       desistência depois de 3 s e confirmação com "sim", com "não" e com silêncio.
