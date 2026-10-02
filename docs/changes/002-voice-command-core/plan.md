@@ -80,7 +80,7 @@ compactação). O código da POC 001 (`_poc/`, ignorado pelo git) é referência
       `chrome://` sem pedido ao proxy (CA-09).
 - [x] 8. Painel: fala, estados, confirmação falada, nuvem ou local, permissão e atalho. Fim: o engenheiro fala "clica em
       entrar" na página de teste e o botão é clicado; o painel funciona só com teclado.
-- [ ] 9. Eval do Jev: `scripts/eval.js` com os 40 casos. Fim: `attachments/ca04-eval.md` com ≥ 90% nos cenários 1 e 2,
+- [x] 9. Eval do Jev: `scripts/eval.js` com os 40 casos. Fim: `attachments/ca04-eval.md` com ≥ 90% nos cenários 1 e 2,
       0 perigoso executado e ≤ 5% de conversas como comando (CA-04).
 - [ ] 10. Roteiro falado e latência: o engenheiro fala e o Claude registra só métricas. Fim: `attachments/ca05-roteiro.md`
       com os 5 cenários nos 6 sites e na página de teste, com clique real, "sim" e "não", e `attachments/ca06-latencia.md`
@@ -133,3 +133,6 @@ compactação). O código da POC 001 (`_poc/`, ignorado pelo git) é referência
     página ilegível (RF-11). Esse campo não vai ao Jev;
   - o e2e do caminho inteiro fica em `tests/e2e/comando.test.js` e usa o proxy de verdade na porta 8787 com um Jev
     falso; ele falha com aviso se o proxy local estiver no ar.
+- 2026-10-01, passo 9: os casos e os snapshots vieram da POC 001 convertidos para o contrato da leitura atual (`tipo`
+  `cartao` no lugar de `sensivel`, sem os campos de medição do E3). Caso sem elemento esperado (`null` na POC) conta só
+  a decisão e a intenção. O relatório sai em stdout, e não pelo log, porque são frases de roteiro e páginas públicas.

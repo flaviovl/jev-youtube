@@ -1,0 +1,906 @@
+{
+  "url": "https://g1.globo.com/",
+  "titulo": "g1 - O portal de notícias da Globo",
+  "elementos": [
+    {
+      "id": "j1",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Menu",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j2",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "atalho página home",
+      "destino": "/",
+      "noViewport": true
+    },
+    {
+      "id": "j3",
+      "tag": "input",
+      "role": null,
+      "tipo": "search",
+      "nome": "buscar",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j4",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Botão de login Conta Globo",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j5",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Entrar",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j6",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Criar uma conta",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j7",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Entrar",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j8",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Criar uma conta",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j9",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Eleições",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j10",
+      "tag": "iframe",
+      "role": null,
+      "tipo": null,
+      "nome": "Publicidade",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j11",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Política TSE decide derrubar posts falsos que relacionam Flávio Bolsonaro a caso",
+      "destino": "/politica/noticia/2026/09/30/mendonca-vota-para-confirmar-decisao-que-tirou-do-ar-posts-sobre-nossa-senhora-aparecida.ghtml",
+      "noViewport": true
+    },
+    {
+      "id": "j12",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Rio de Janeiro Mexicano morre ao cair de capô de carro ao tentar impedir fuga de",
+      "destino": "/rj/rio-de-janeiro/noticia/2026/09/30/morte-turista-centro-do-rio.ghtml",
+      "noViewport": true
+    },
+    {
+      "id": "j13",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "São Paulo Monotrilho da Linha 17-Ouro tem falha no 1º dia de ampliação do horári",
+      "destino": "/sp/sao-paulo/noticia/2026/09/30/monotrilho-da-linha-17-ouro-tem-falha-no-1o-dia-de-ampliacao-do-horario-em-sp.ghtml",
+      "noViewport": true
+    },
+    {
+      "id": "j14",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Ir para globo.com",
+      "destino": "www.globo.com/",
+      "noViewport": true
+    },
+    {
+      "id": "j15",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Ir para G E",
+      "destino": "ge.globo.com/",
+      "noViewport": true
+    },
+    {
+      "id": "j16",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Ir para G Show",
+      "destino": "gshow.globo.com/",
+      "noViewport": true
+    },
+    {
+      "id": "j17",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Ir para Globoplay",
+      "destino": "globoplay.globo.com/",
+      "noViewport": true
+    },
+    {
+      "id": "j18",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Ir para g1 jogos",
+      "destino": "/jogos/",
+      "noViewport": true
+    },
+    {
+      "id": "j19",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Ir para GloboPop",
+      "destino": "globopop.onelink.me/GXi1/po79jn4d",
+      "noViewport": true
+    },
+    {
+      "id": "j20",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Ir para O Globo",
+      "destino": "oglobo.globo.com/",
+      "noViewport": true
+    },
+    {
+      "id": "j21",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Ir para Valor Econômico",
+      "destino": "valor.globo.com/",
+      "noViewport": true
+    },
+    {
+      "id": "j22",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "",
+      "destino": "googleads.g.doubleclick.net/pcs/click",
+      "noViewport": true
+    },
+    {
+      "id": "j23",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Botão de login Conta Globo",
+      "destino": null,
+      "noViewport": false
+    },
+    {
+      "id": "j24",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Receitas",
+      "destino": "receitas.globo.com/",
+      "noViewport": false
+    },
+    {
+      "id": "j25",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "atalho página home",
+      "destino": "/",
+      "noViewport": false
+    },
+    {
+      "id": "j26",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Menu",
+      "destino": null,
+      "noViewport": false
+    },
+    {
+      "id": "j27",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Globo.com",
+      "destino": "www.globo.com/",
+      "noViewport": false
+    },
+    {
+      "id": "j28",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Ajuda Globo",
+      "destino": "ajuda.globo.com/",
+      "noViewport": false
+    },
+    {
+      "id": "j29",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Carreiras Globo",
+      "destino": "vempraglobo.g.globo/",
+      "noViewport": false
+    },
+    {
+      "id": "j30",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Jogos",
+      "destino": "/jogos",
+      "noViewport": false
+    },
+    {
+      "id": "j31",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Eleições 2026",
+      "destino": "/politica/eleicoes/2026/",
+      "noViewport": false
+    },
+    {
+      "id": "j32",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Guia de Compras",
+      "destino": "/guia/guia-de-compras/",
+      "noViewport": false
+    },
+    {
+      "id": "j33",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Carros",
+      "destino": "/carros/",
+      "noViewport": false
+    },
+    {
+      "id": "j34",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "GloboNews",
+      "destino": "/globonews/",
+      "noViewport": false
+    },
+    {
+      "id": "j35",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Blogs e Colunas",
+      "destino": "/blogs-e-colunas/",
+      "noViewport": false
+    },
+    {
+      "id": "j36",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Vídeos",
+      "destino": "/videos/",
+      "noViewport": false
+    },
+    {
+      "id": "j37",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Webstories",
+      "destino": "/webstories/",
+      "noViewport": false
+    },
+    {
+      "id": "j38",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Princípios editoriais",
+      "destino": "/principios-editoriais-do-grupo-globo.html",
+      "noViewport": false
+    },
+    {
+      "id": "j39",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Sobre o g1",
+      "destino": "/institucional/sobre-o-g1.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j40",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "App g1",
+      "destino": "especiais.g1.globo.com/app-g1/",
+      "noViewport": false
+    },
+    {
+      "id": "j41",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Equipe",
+      "destino": "/institucional/equipe-do-g1.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j42",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Entre em contato",
+      "destino": "/institucional/vc-no-g1-como-entrar-em-contato-enviar-videos-fotos-e-mensagens.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j43",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Termos de uso do g1",
+      "destino": "/institucional/termos-de-uso-do-g1.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j44",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "grupo globo",
+      "destino": "grupoglobo.globo.com/",
+      "noViewport": false
+    },
+    {
+      "id": "j45",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "",
+      "destino": "/politica/noticia/2026/09/30/apos-mendonca-mudar-voto-tse-decide-liberar-post-de-humorista-sobre-nossa-senhora-aparecida.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j46",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Mendonça ajusta voto e TSE decide liberar post de humorista sobre padroeira",
+      "destino": "/politica/noticia/2026/09/30/apos-mendonca-mudar-voto-tse-decide-liberar-post-de-humorista-sobre-nossa-senhora-aparecida.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j47",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Valparaíso de Goiás Probabilidade de chuva: 0% 0mm manhã tarde noite 33º max 24º",
+      "destino": "/previsao-do-tempo/go/valparaiso-de-goias.html",
+      "noViewport": false
+    },
+    {
+      "id": "j48",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "",
+      "destino": "/politica/noticia/2026/09/30/dino-manda-policia-federal-apurar-onda-de-ataques-a-imagens-religiosas.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j49",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Veja a previsão do Climatempo",
+      "destino": "www.climatempo.com.br/",
+      "noViewport": false
+    },
+    {
+      "id": "j50",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Após ordem de Dino, PF abre inquérito para apurar onda de ataques a imagens reli",
+      "destino": "/politica/noticia/2026/09/30/dino-manda-policia-federal-apurar-onda-de-ataques-a-imagens-religiosas.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j51",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Flávio Bolsonaro pede que Dino seja afastado de casos envolvendo ele, Lula e ele",
+      "destino": "/politica/eleicoes/2026/noticia/2026/09/30/flavio-bolsonaro-pede-ao-stf-que-dino-seja-afastado-de-processos-envolvendo-o-parlamentar-lula-e-eleicoes.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j52",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Veja o que é #FATO ou #FAKE no debate da Globo com candidatos ao Governo de São ",
+      "destino": "/fato-ou-fake/eleicoes/noticia/2026/09/30/veja-o-que-e-fato-ou-fake-no-debate-da-globo-com-candidatos-ao-governo-de-sao-paulo.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j53",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "'Dark Horse': PF faz nova perícia em material apreendido pela Polícia Civil de S",
+      "destino": "/sp/sao-paulo/noticia/2026/09/30/dark-horse-pf-faz-nova-pericia-em-material-apreendido-pela-policia-civil-de-sp-por-ordem-de-flavio-dino.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j54",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "VALDO: crise no STF atrasa inquérito da PF do caso Master",
+      "destino": "/politica/blog/valdo-cruz/post/2026/09/30/crise-no-stf-impede-pf-de-concluir-inquerito-mae-do-caso-master.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j55",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "TSE decide derrubar posts falsos que relacionam Flávio Bolsonaro a caso Nossa Se",
+      "destino": "/politica/noticia/2026/09/30/mendonca-vota-para-confirmar-decisao-que-tirou-do-ar-posts-sobre-nossa-senhora-aparecida.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j56",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "",
+      "destino": "/politica/noticia/2026/09/30/em-meio-a-crise-no-stf-gilmar-critica-vazamentos-em-fala-no-aniversario-de-um-ano-de-fachin-na-presidencia-do-stf.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j57",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "'Puxei os controles e parei a queda do avião': passageiro conta como impediu tra",
+      "destino": "/mundo/noticia/2026/09/30/puxei-os-controles-e-parei-a-queda-do-aviao-passageiro-de-voo-em-que-copiloto-esfaqueou-piloto-relata-como-entrou-em-cabine.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j58",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Em meio à crise no STF, Gilmar elogia Fachin e critica vazamentos seletivos",
+      "destino": "/politica/noticia/2026/09/30/em-meio-a-crise-no-stf-gilmar-critica-vazamentos-em-fala-no-aniversario-de-um-ano-de-fachin-na-presidencia-do-stf.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j59",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Lula informa que não vai participar do debate da Globo, nesta quinta-feira (1º)",
+      "destino": "/politica/eleicoes/2026/noticia/2026/09/30/lula-informa-que-nao-vai-participar-do-debate-da-globo.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j60",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Novas regras para doação de sangue entram em vigor nesta quarta; veja o que muda",
+      "destino": "/saude/noticia/2026/09/30/novas-regras-para-doacao-de-sangue-entram-em-vigor-nesta-quarta-veja-o-que-muda.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j61",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "",
+      "destino": "/jornal-nacional/noticia/2026/09/30/titulo-eleitoral-digital-ganha-novas-funcoes-e-mais-seguranca-para-as-eleicoes-saiba-mais.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j62",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Título eleitoral digital ganha novas funções e mais segurança; saiba mais",
+      "destino": "/jornal-nacional/noticia/2026/09/30/titulo-eleitoral-digital-ganha-novas-funcoes-e-mais-seguranca-para-as-eleicoes-saiba-mais.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j63",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Saiba como baixar o e-Título no celular",
+      "destino": "/politica/eleicoes/2026/noticia/2026/09/29/eleicoes-2026-como-baixar-o-e-titulo-no-celular.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j64",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "RJ: Vídeo mostra momento em que cratera se abre e engole dois carros",
+      "destino": "/rj/sul-do-rio-costa-verde/noticia/2026/09/30/video-veja-momento-em-que-cratera-se-abre-e-engole-dois-carros-durante-temporal-no-interior-do-rj.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j65",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Foto: (Cratera se abre no asfalto em decorrência das fortes chuvas em Barra Mans",
+      "destino": "/rj/sul-do-rio-costa-verde/noticia/2026/09/30/video-veja-momento-em-que-cratera-se-abre-e-engole-dois-carros-durante-temporal-no-interior-do-rj.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j66",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "SP: Jovem morto a tiros após discussão no trânsito era estudante de Medicina",
+      "destino": "/sp/vale-do-paraiba-regiao/noticia/2026/09/30/jovem-morto-a-tiros-apos-discussao-no-transito-em-taubate-era-estudante-de-medicina-da-unitau.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j67",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Foto: (Bruno Hashimura San Juliano, de 23 anos, morto a tiros após uma discussão",
+      "destino": "/sp/vale-do-paraiba-regiao/noticia/2026/09/30/jovem-morto-a-tiros-apos-discussao-no-transito-em-taubate-era-estudante-de-medicina-da-unitau.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j68",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "MG: Padre viraliza nas redes pela aparência e divide opiniões",
+      "destino": "/mg/sul-de-minas/noticia/2026/09/30/padre-de-mg-viraliza-nas-redes-pela-aparencia-e-divide-opinioes-paroquia-limita-comentarios.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j69",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Foto: (Padre de MG viraliza nas redes pela aparência e divide opiniões; paróquia",
+      "destino": "/mg/sul-de-minas/noticia/2026/09/30/padre-de-mg-viraliza-nas-redes-pela-aparencia-e-divide-opinioes-paroquia-limita-comentarios.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j70",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Valor",
+      "destino": "valorpro.globo.com/",
+      "noViewport": false
+    },
+    {
+      "id": "j71",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Ibovespa +1.37% 186.340 pts Created with Highcharts 4.2.7 10h 11h 12h 13h 14h 15",
+      "destino": "valorpro.globo.com/",
+      "noViewport": false
+    },
+    {
+      "id": "j72",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "",
+      "destino": "/politica/eleicoes/2026/noticia/2026/09/30/cola-eleitoral-veja-a-ordem-de-votacao-na-urna-e-baixe-a-colinha-para-levar-no-domingo-4.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j73",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Cola eleitoral: veja a ordem de votação na urna e baixe a 'colinha' para levar n",
+      "destino": "/politica/eleicoes/2026/noticia/2026/09/30/cola-eleitoral-veja-a-ordem-de-votacao-na-urna-e-baixe-a-colinha-para-levar-no-domingo-4.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j74",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Compra de Moedas Dólar Comercial R$ 5,174 -0,81% Euro R$ 5,859 -0,93%",
+      "destino": "valorpro.globo.com/",
+      "noViewport": false
+    },
+    {
+      "id": "j75",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Eleitor terá dois votos ao Senado, mas não poderá repetir candidato",
+      "destino": "/jornal-nacional/noticia/2026/09/30/eleicoes-2026-se-votar-duas-vezes-no-mesmo-senador-o-segundo-voto-e-anulado.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j76",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Tudo sobre economia",
+      "destino": "/economia",
+      "noViewport": false
+    },
+    {
+      "id": "j77",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Foto: (Natuza Nery comanda o podcast O Assunto / g1)",
+      "destino": "/podcast/o-assunto/noticia/2026/09/30/congresso-nacional-o-que-esta-em-jogo-no-orcamento-e-na-crise-entre-os-poderes-o-assunto-1815.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j78",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "",
+      "destino": "/jornal-nacional/noticia/2026/09/30/debate-presidencial-dinamica-incentiva-a-apresentacao-de-propostas-e-a-discussao-dos-principais-temas-do-brasil.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j79",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Congresso Nacional: o que está em jogo no Orçamento e na crise entre os Poderes",
+      "destino": "/podcast/o-assunto/noticia/2026/09/30/congresso-nacional-o-que-esta-em-jogo-no-orcamento-e-na-crise-entre-os-poderes-o-assunto-1815.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j80",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Debate presidencial: como será o último encontro entre candidatos antes do 1º tu",
+      "destino": "/jornal-nacional/noticia/2026/09/30/debate-presidencial-dinamica-incentiva-a-apresentacao-de-propostas-e-a-discussao-dos-principais-temas-do-brasil.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j81",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Lula informa que não vai participar do debate da Globo",
+      "destino": "/politica/eleicoes/2026/noticia/2026/09/30/lula-informa-que-nao-vai-participar-do-debate-da-globo.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j82",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Pular para o conteúdo",
+      "destino": "/",
+      "noViewport": false
+    },
+    {
+      "id": "j83",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Foto: (Arte Isso é Fantástico / Fantástico)",
+      "destino": "/fantastico/podcast/isso-e-fantastico/noticia/2026/09/27/ebola-sonia-bridi-acompanha-combate-ao-virus-na-republica-democratica-do-congo.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j84",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Confira os confirmados no debate presidencial desta quinta",
+      "destino": "/politica/eleicoes/2026/noticia/2026/09/30/quem-vai-ao-debate-presidencial-da-globo.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j85",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Ebola: Sônia Bridi acompanha combate ao vírus na República Democrática do Congo",
+      "destino": "/fantastico/podcast/isso-e-fantastico/noticia/2026/09/27/ebola-sonia-bridi-acompanha-combate-ao-virus-na-republica-democratica-do-congo.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j86",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Veja data, horário e onde assistir",
+      "destino": "/politica/eleicoes/2026/noticia/2026/09/30/debate-de-presidenciaveis-na-globo-veja-data-horario-e-onde-assistir.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j87",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Tudo sobre podcasts do g1",
+      "destino": "/podcast",
+      "noViewport": false
+    },
+    {
+      "id": "j88",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "",
+      "destino": "/politica/eleicoes/2026/noticia/2026/09/30/maioria-ainda-nao-decidiu-voto-para-senador-e-deputado-diz-datafolha.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j89",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Maioria ainda não decidiu voto para senador e deputado, diz Datafolha",
+      "destino": "/politica/eleicoes/2026/noticia/2026/09/30/maioria-ainda-nao-decidiu-voto-para-senador-e-deputado-diz-datafolha.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j90",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "",
+      "destino": "/politica/eleicoes/2026/noticia/2026/09/30/voto-util-analise-quaest.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j91",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "ANÁLISE: o voto útil já começou: quem vai se beneficiar?",
+      "destino": "/politica/eleicoes/2026/noticia/2026/09/30/voto-util-analise-quaest.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j92",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Veja propostas dos presidenciáveis para segurança, combate à corrupção e mais",
+      "destino": "/politica/eleicoes/2026/noticia/2026/09/30/propostas-candidatos-presidente-eleicoes-2026.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j93",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Próxima pesquisa eleitoral sai amanhã; veja calendário da reta final",
+      "destino": "/politica/eleicoes/2026/noticia/2026/09/30/pesquisas-presidente-primeiro-turno-quaest-datafolha.ghtml",
+      "noViewport": false
+    },
+    {
+      "id": "j94",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Mostrar mais conteúdos",
+      "destino": null,
+      "noViewport": false
+    },
+    {
+      "id": "j95",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "",
+      "destino": "/",
+      "noViewport": false
+    },
+    {
+      "id": "j96",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Últimas Notícias",
+      "destino": "/ultimas-noticias.html",
+      "noViewport": false
+    },
+    {
+      "id": "j97",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "princípios editoriais",
+      "destino": "/principios-editoriais-do-grupo-globo.html",
+      "noViewport": false
+    },
+    {
+      "id": "j98",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "política de privacidade",
+      "destino": "privacidade.globo.com/privacy-policy/",
+      "noViewport": false
+    },
+    {
+      "id": "j99",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "minha conta",
+      "destino": "minhaconta.globo.com/",
+      "noViewport": false
+    },
+    {
+      "id": "j100",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "anuncie conosco",
+      "destino": "globoads.globo.com/",
+      "noViewport": false
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "url": "https://www.google.com/",
+  "titulo": "Google",
+  "elementos": [
+    {
+      "id": "j1",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Gmail",
+      "destino": "mail.google.com/mail/&ogbl",
+      "noViewport": true
+    },
+    {
+      "id": "j2",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Pesquisar imagens",
+      "destino": "/imghp",
+      "noViewport": true
+    },
+    {
+      "id": "j3",
+      "tag": "a",
+      "role": "button",
+      "tipo": null,
+      "nome": "Google Apps",
+      "destino": "www.google.com.br/intl/pt-BR/about/products",
+      "noViewport": true
+    },
+    {
+      "id": "j4",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Fazer login",
+      "destino": "accounts.google.com/ServiceLogin",
+      "noViewport": true
+    },
+    {
+      "id": "j5",
+      "tag": "textarea",
+      "role": "combobox",
+      "tipo": null,
+      "nome": "Pesquisar",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j6",
+      "tag": "div",
+      "role": "button",
+      "tipo": null,
+      "nome": "Ferramentas de inserção de texto",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j7",
+      "tag": "div",
+      "role": "button",
+      "tipo": null,
+      "nome": "Pesquisar por voz",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j8",
+      "tag": "div",
+      "role": "button",
+      "tipo": null,
+      "nome": "Pesquisa por imagem",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j9",
+      "tag": "button",
+      "role": "link",
+      "tipo": null,
+      "nome": "Modo IA",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j10",
+      "tag": "input",
+      "role": "button",
+      "tipo": "submit",
+      "nome": "Pesquisa Google",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j11",
+      "tag": "input",
+      "role": null,
+      "tipo": "submit",
+      "nome": "Estou com sorte",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j12",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Sobre",
+      "destino": "about.google/",
+      "noViewport": true
+    },
+    {
+      "id": "j13",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Publicidade",
+      "destino": "/intl/pt-BR_br/ads/",
+      "noViewport": true
+    },
+    {
+      "id": "j14",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Negócios",
+      "destino": "/services/",
+      "noViewport": true
+    },
+    {
+      "id": "j15",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Como funciona a Pesquisa",
+      "destino": "google.com/search/howsearchworks/",
+      "noViewport": true
+    },
+    {
+      "id": "j16",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Privacidade",
+      "destino": "policies.google.com/privacy",
+      "noViewport": true
+    },
+    {
+      "id": "j17",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Termos",
+      "destino": "policies.google.com/terms",
+      "noViewport": true
+    },
+    {
+      "id": "j18",
+      "tag": "div",
+      "role": "button",
+      "tipo": null,
+      "nome": "Configurações",
+      "destino": null,
+      "noViewport": true
+    }
+  ]
+}

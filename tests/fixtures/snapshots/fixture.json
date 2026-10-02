@@ -1,0 +1,906 @@
+{
+  "url": "http://127.0.0.1:8000/pagina-teste.html",
+  "titulo": "Página de teste da POC 001",
+  "elementos": [
+    {
+      "id": "j1",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Início",
+      "destino": "/",
+      "noViewport": true
+    },
+    {
+      "id": "j2",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Vídeos",
+      "destino": "/videos",
+      "noViewport": true
+    },
+    {
+      "id": "j3",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Busca avançada",
+      "destino": "/busca",
+      "noViewport": true
+    },
+    {
+      "id": "j4",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Entrar",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j5",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Criar conta",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j6",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Configurações",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j7",
+      "tag": "input",
+      "role": null,
+      "tipo": "search",
+      "nome": "Pesquisar",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j8",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Buscar",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j9",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Vídeo 1: Receita de bolo",
+      "destino": "/v/1",
+      "noViewport": true
+    },
+    {
+      "id": "j10",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Vídeo 2: Música para estudar",
+      "destino": "/v/2",
+      "noViewport": true
+    },
+    {
+      "id": "j11",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Vídeo 3: Tutorial de violão",
+      "destino": "/v/3",
+      "noViewport": true
+    },
+    {
+      "id": "j12",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Vídeo 4: Notícias do dia",
+      "destino": "/v/4",
+      "noViewport": true
+    },
+    {
+      "id": "j13",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Inscrever-se",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j14",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Comprar agora",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j15",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Adicionar ao carrinho",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j16",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Salvar",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j17",
+      "tag": "div",
+      "role": "button",
+      "tipo": null,
+      "nome": "Curtir",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j18",
+      "tag": "div",
+      "role": null,
+      "tipo": null,
+      "nome": "Compartilhar",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j19",
+      "tag": "input",
+      "role": null,
+      "tipo": "text",
+      "nome": "Usuário",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j20",
+      "tag": "input",
+      "role": null,
+      "tipo": "password",
+      "nome": "Senha",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j21",
+      "tag": "input",
+      "role": null,
+      "tipo": "cartao",
+      "nome": "Número do cartão",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j22",
+      "tag": "textarea",
+      "role": null,
+      "tipo": null,
+      "nome": "Observações",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j23",
+      "tag": "span",
+      "role": null,
+      "tipo": null,
+      "nome": "",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j24",
+      "tag": "select",
+      "role": null,
+      "tipo": null,
+      "nome": "Plano",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j25",
+      "tag": "input",
+      "role": null,
+      "tipo": "submit",
+      "nome": "Fazer login",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j26",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Excluir conta",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j27",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 1",
+      "destino": "/artigo/1",
+      "noViewport": true
+    },
+    {
+      "id": "j28",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 2",
+      "destino": "/artigo/2",
+      "noViewport": true
+    },
+    {
+      "id": "j29",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 3",
+      "destino": "/artigo/3",
+      "noViewport": true
+    },
+    {
+      "id": "j30",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 4",
+      "destino": "/artigo/4",
+      "noViewport": true
+    },
+    {
+      "id": "j31",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 5",
+      "destino": "/artigo/5",
+      "noViewport": true
+    },
+    {
+      "id": "j32",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 6",
+      "destino": "/artigo/6",
+      "noViewport": true
+    },
+    {
+      "id": "j33",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 7",
+      "destino": "/artigo/7",
+      "noViewport": true
+    },
+    {
+      "id": "j34",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Botão na sombra",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j35",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Comentar no quadro",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j36",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 8",
+      "destino": "/artigo/8",
+      "noViewport": false
+    },
+    {
+      "id": "j37",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 9",
+      "destino": "/artigo/9",
+      "noViewport": false
+    },
+    {
+      "id": "j38",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 10",
+      "destino": "/artigo/10",
+      "noViewport": false
+    },
+    {
+      "id": "j39",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 11",
+      "destino": "/artigo/11",
+      "noViewport": false
+    },
+    {
+      "id": "j40",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 12",
+      "destino": "/artigo/12",
+      "noViewport": false
+    },
+    {
+      "id": "j41",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 13",
+      "destino": "/artigo/13",
+      "noViewport": false
+    },
+    {
+      "id": "j42",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 14",
+      "destino": "/artigo/14",
+      "noViewport": false
+    },
+    {
+      "id": "j43",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 15",
+      "destino": "/artigo/15",
+      "noViewport": false
+    },
+    {
+      "id": "j44",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 16",
+      "destino": "/artigo/16",
+      "noViewport": false
+    },
+    {
+      "id": "j45",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 17",
+      "destino": "/artigo/17",
+      "noViewport": false
+    },
+    {
+      "id": "j46",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 18",
+      "destino": "/artigo/18",
+      "noViewport": false
+    },
+    {
+      "id": "j47",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 19",
+      "destino": "/artigo/19",
+      "noViewport": false
+    },
+    {
+      "id": "j48",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 20",
+      "destino": "/artigo/20",
+      "noViewport": false
+    },
+    {
+      "id": "j49",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 21",
+      "destino": "/artigo/21",
+      "noViewport": false
+    },
+    {
+      "id": "j50",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 22",
+      "destino": "/artigo/22",
+      "noViewport": false
+    },
+    {
+      "id": "j51",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 23",
+      "destino": "/artigo/23",
+      "noViewport": false
+    },
+    {
+      "id": "j52",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 24",
+      "destino": "/artigo/24",
+      "noViewport": false
+    },
+    {
+      "id": "j53",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 25",
+      "destino": "/artigo/25",
+      "noViewport": false
+    },
+    {
+      "id": "j54",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 26",
+      "destino": "/artigo/26",
+      "noViewport": false
+    },
+    {
+      "id": "j55",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 27",
+      "destino": "/artigo/27",
+      "noViewport": false
+    },
+    {
+      "id": "j56",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 28",
+      "destino": "/artigo/28",
+      "noViewport": false
+    },
+    {
+      "id": "j57",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 29",
+      "destino": "/artigo/29",
+      "noViewport": false
+    },
+    {
+      "id": "j58",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 30",
+      "destino": "/artigo/30",
+      "noViewport": false
+    },
+    {
+      "id": "j59",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 31",
+      "destino": "/artigo/31",
+      "noViewport": false
+    },
+    {
+      "id": "j60",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 32",
+      "destino": "/artigo/32",
+      "noViewport": false
+    },
+    {
+      "id": "j61",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 33",
+      "destino": "/artigo/33",
+      "noViewport": false
+    },
+    {
+      "id": "j62",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 34",
+      "destino": "/artigo/34",
+      "noViewport": false
+    },
+    {
+      "id": "j63",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 35",
+      "destino": "/artigo/35",
+      "noViewport": false
+    },
+    {
+      "id": "j64",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 36",
+      "destino": "/artigo/36",
+      "noViewport": false
+    },
+    {
+      "id": "j65",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 37",
+      "destino": "/artigo/37",
+      "noViewport": false
+    },
+    {
+      "id": "j66",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 38",
+      "destino": "/artigo/38",
+      "noViewport": false
+    },
+    {
+      "id": "j67",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 39",
+      "destino": "/artigo/39",
+      "noViewport": false
+    },
+    {
+      "id": "j68",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 40",
+      "destino": "/artigo/40",
+      "noViewport": false
+    },
+    {
+      "id": "j69",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 41",
+      "destino": "/artigo/41",
+      "noViewport": false
+    },
+    {
+      "id": "j70",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 42",
+      "destino": "/artigo/42",
+      "noViewport": false
+    },
+    {
+      "id": "j71",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 43",
+      "destino": "/artigo/43",
+      "noViewport": false
+    },
+    {
+      "id": "j72",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 44",
+      "destino": "/artigo/44",
+      "noViewport": false
+    },
+    {
+      "id": "j73",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 45",
+      "destino": "/artigo/45",
+      "noViewport": false
+    },
+    {
+      "id": "j74",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 46",
+      "destino": "/artigo/46",
+      "noViewport": false
+    },
+    {
+      "id": "j75",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 47",
+      "destino": "/artigo/47",
+      "noViewport": false
+    },
+    {
+      "id": "j76",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 48",
+      "destino": "/artigo/48",
+      "noViewport": false
+    },
+    {
+      "id": "j77",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 49",
+      "destino": "/artigo/49",
+      "noViewport": false
+    },
+    {
+      "id": "j78",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 50",
+      "destino": "/artigo/50",
+      "noViewport": false
+    },
+    {
+      "id": "j79",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 51",
+      "destino": "/artigo/51",
+      "noViewport": false
+    },
+    {
+      "id": "j80",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 52",
+      "destino": "/artigo/52",
+      "noViewport": false
+    },
+    {
+      "id": "j81",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 53",
+      "destino": "/artigo/53",
+      "noViewport": false
+    },
+    {
+      "id": "j82",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 54",
+      "destino": "/artigo/54",
+      "noViewport": false
+    },
+    {
+      "id": "j83",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 55",
+      "destino": "/artigo/55",
+      "noViewport": false
+    },
+    {
+      "id": "j84",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 56",
+      "destino": "/artigo/56",
+      "noViewport": false
+    },
+    {
+      "id": "j85",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 57",
+      "destino": "/artigo/57",
+      "noViewport": false
+    },
+    {
+      "id": "j86",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 58",
+      "destino": "/artigo/58",
+      "noViewport": false
+    },
+    {
+      "id": "j87",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 59",
+      "destino": "/artigo/59",
+      "noViewport": false
+    },
+    {
+      "id": "j88",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 60",
+      "destino": "/artigo/60",
+      "noViewport": false
+    },
+    {
+      "id": "j89",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 61",
+      "destino": "/artigo/61",
+      "noViewport": false
+    },
+    {
+      "id": "j90",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 62",
+      "destino": "/artigo/62",
+      "noViewport": false
+    },
+    {
+      "id": "j91",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 63",
+      "destino": "/artigo/63",
+      "noViewport": false
+    },
+    {
+      "id": "j92",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 64",
+      "destino": "/artigo/64",
+      "noViewport": false
+    },
+    {
+      "id": "j93",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 65",
+      "destino": "/artigo/65",
+      "noViewport": false
+    },
+    {
+      "id": "j94",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 66",
+      "destino": "/artigo/66",
+      "noViewport": false
+    },
+    {
+      "id": "j95",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 67",
+      "destino": "/artigo/67",
+      "noViewport": false
+    },
+    {
+      "id": "j96",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 68",
+      "destino": "/artigo/68",
+      "noViewport": false
+    },
+    {
+      "id": "j97",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 69",
+      "destino": "/artigo/69",
+      "noViewport": false
+    },
+    {
+      "id": "j98",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 70",
+      "destino": "/artigo/70",
+      "noViewport": false
+    },
+    {
+      "id": "j99",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 71",
+      "destino": "/artigo/71",
+      "noViewport": false
+    },
+    {
+      "id": "j100",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Artigo 72",
+      "destino": "/artigo/72",
+      "noViewport": false
+    }
+  ]
+}

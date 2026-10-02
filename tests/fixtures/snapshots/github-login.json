@@ -1,0 +1,141 @@
+{
+  "url": "https://github.com/login",
+  "titulo": "Sign in to GitHub · GitHub",
+  "elementos": [
+    {
+      "id": "j1",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Skip to content",
+      "destino": "/login",
+      "noViewport": true
+    },
+    {
+      "id": "j2",
+      "tag": "input",
+      "role": null,
+      "tipo": "text",
+      "nome": "Username or email address",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j3",
+      "tag": "input",
+      "role": null,
+      "tipo": "password",
+      "nome": "Password",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j4",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Forgot password?",
+      "destino": "/password_reset",
+      "noViewport": true
+    },
+    {
+      "id": "j5",
+      "tag": "input",
+      "role": null,
+      "tipo": "submit",
+      "nome": "Sign in",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j6",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Continue with Google",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j7",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Continue with Apple",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j8",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Create an account",
+      "destino": "/signup",
+      "noViewport": true
+    },
+    {
+      "id": "j9",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Sign in with a passkey",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j10",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Terms",
+      "destino": "docs.github.com/site-policy/github-terms/github-terms-of-service",
+      "noViewport": true
+    },
+    {
+      "id": "j11",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Privacy",
+      "destino": "docs.github.com/site-policy/privacy-policies/github-privacy-statement",
+      "noViewport": true
+    },
+    {
+      "id": "j12",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Docs",
+      "destino": "docs.github.com/",
+      "noViewport": true
+    },
+    {
+      "id": "j13",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Contact GitHub Support",
+      "destino": "support.github.com/",
+      "noViewport": true
+    },
+    {
+      "id": "j14",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Manage cookies",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j15",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Do not share my personal information",
+      "destino": null,
+      "noViewport": true
+    }
+  ]
+}

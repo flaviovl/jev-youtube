@@ -1,0 +1,249 @@
+{
+  "url": "https://www.youtube.com/",
+  "titulo": "YouTube",
+  "elementos": [
+    {
+      "id": "j1",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Guia",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j2",
+      "tag": "input",
+      "role": "combobox",
+      "tipo": "text",
+      "nome": "",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j3",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j4",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Search",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j5",
+      "tag": "a",
+      "role": "link",
+      "tipo": null,
+      "nome": "Início",
+      "destino": "/",
+      "noViewport": true
+    },
+    {
+      "id": "j6",
+      "tag": "tp-yt-paper-item",
+      "role": "link",
+      "tipo": null,
+      "nome": "Início",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j7",
+      "tag": "a",
+      "role": "link",
+      "tipo": null,
+      "nome": "Shorts",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j8",
+      "tag": "tp-yt-paper-item",
+      "role": "link",
+      "tipo": null,
+      "nome": "Shorts",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j9",
+      "tag": "a",
+      "role": "link",
+      "tipo": null,
+      "nome": "Inscrições",
+      "destino": "/feed/subscriptions",
+      "noViewport": true
+    },
+    {
+      "id": "j10",
+      "tag": "tp-yt-paper-item",
+      "role": "link",
+      "tipo": null,
+      "nome": "Inscrições",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j11",
+      "tag": "a",
+      "role": "link",
+      "tipo": null,
+      "nome": "Você",
+      "destino": "/feed/you",
+      "noViewport": true
+    },
+    {
+      "id": "j12",
+      "tag": "tp-yt-paper-item",
+      "role": "link",
+      "tipo": null,
+      "nome": "Você",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j13",
+      "tag": "a",
+      "role": "link",
+      "tipo": null,
+      "nome": "Histórico",
+      "destino": "/feed/history",
+      "noViewport": true
+    },
+    {
+      "id": "j14",
+      "tag": "tp-yt-paper-item",
+      "role": "link",
+      "tipo": null,
+      "nome": "Histórico",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j15",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Fazer login",
+      "destino": "accounts.google.com/ServiceLogin",
+      "noViewport": true
+    },
+    {
+      "id": "j16",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Sobre",
+      "destino": "/about/",
+      "noViewport": true
+    },
+    {
+      "id": "j17",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Imprensa",
+      "destino": "/about/press/",
+      "noViewport": true
+    },
+    {
+      "id": "j18",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Direitos autorais",
+      "destino": "/about/copyright/",
+      "noViewport": true
+    },
+    {
+      "id": "j19",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Entre em contato",
+      "destino": "/t/contact_us/",
+      "noViewport": true
+    },
+    {
+      "id": "j20",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Criadores de conteúdo",
+      "destino": "/creators/",
+      "noViewport": true
+    },
+    {
+      "id": "j21",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Publicidade",
+      "destino": "/ads/",
+      "noViewport": true
+    },
+    {
+      "id": "j22",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Desenvolvedores",
+      "destino": "developers.google.com/youtube",
+      "noViewport": true
+    },
+    {
+      "id": "j23",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Termos",
+      "destino": "/t/terms",
+      "noViewport": true
+    },
+    {
+      "id": "j24",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Privacidade",
+      "destino": "/t/privacy",
+      "noViewport": true
+    },
+    {
+      "id": "j25",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Política e segurança",
+      "destino": "/about/policies/",
+      "noViewport": true
+    },
+    {
+      "id": "j26",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Como funciona o YouTube",
+      "destino": "/howyoutubeworks",
+      "noViewport": true
+    },
+    {
+      "id": "j27",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Testar os novos recursos",
+      "destino": "/new",
+      "noViewport": true
+    }
+  ]
+}

@@ -1,0 +1,906 @@
+{
+  "url": "https://www.mercadolivre.com.br/",
+  "titulo": "Mercado Livre Brasil - Frete Grátis no mesmo dia",
+  "elementos": [
+    {
+      "id": "j1",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Mercado Livre Brasil - Onde comprar e vender de Tudo",
+      "destino": "/",
+      "noViewport": true
+    },
+    {
+      "id": "j2",
+      "tag": "input",
+      "role": "combobox",
+      "tipo": "text",
+      "nome": "Digite o que você quer encontrar",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j3",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j4",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "4 STREAMINGS EM 1 ASSINATURA",
+      "destino": "/assinaturas/melimais/planos",
+      "noViewport": true
+    },
+    {
+      "id": "j5",
+      "tag": "a",
+      "role": "button",
+      "tipo": null,
+      "nome": "Enviar para Valparaíso de Goiás 72874045",
+      "destino": "/addresses/v3/navigation/hub",
+      "noViewport": true
+    },
+    {
+      "id": "j6",
+      "tag": "a",
+      "role": "button",
+      "tipo": null,
+      "nome": "Categorias",
+      "destino": "/categorias",
+      "noViewport": true
+    },
+    {
+      "id": "j7",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Ofertas",
+      "destino": "/ofertas",
+      "noViewport": true
+    },
+    {
+      "id": "j8",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Cupons",
+      "destino": "/cupons",
+      "noViewport": true
+    },
+    {
+      "id": "j9",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Supermercado",
+      "destino": "/ofertas/supermercado",
+      "noViewport": true
+    },
+    {
+      "id": "j10",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Moda",
+      "destino": "/c/calcados-roupas-e-bolsas",
+      "noViewport": true
+    },
+    {
+      "id": "j11",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Mercado Play Grátis",
+      "destino": "play.mercadolivre.com.br/",
+      "noViewport": true
+    },
+    {
+      "id": "j12",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Vender",
+      "destino": "/syi/core/list",
+      "noViewport": true
+    },
+    {
+      "id": "j13",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Contato",
+      "destino": "/ajuda",
+      "noViewport": true
+    },
+    {
+      "id": "j14",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Crie a sua conta",
+      "destino": "/registration",
+      "noViewport": true
+    },
+    {
+      "id": "j15",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Entre",
+      "destino": "www.mercadolivre.com/jms/mlb/lgz/login",
+      "noViewport": true
+    },
+    {
+      "id": "j16",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Compras",
+      "destino": "myaccount.mercadolivre.com.br/purchases/list",
+      "noViewport": true
+    },
+    {
+      "id": "j17",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "0 produtos em seu carrinho",
+      "destino": "/gz/cart/v2",
+      "noViewport": true
+    },
+    {
+      "id": "j18",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Anterior",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j19",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Mercado com desconto. Até 40% OFF. Consulte termos e condições",
+      "destino": "click1.mercadolivre.com.br/display/clicks/MLB/count",
+      "noViewport": true
+    },
+    {
+      "id": "j20",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Seguinte",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j21",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Anterior",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j22",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Mostrar produtos Frete grátis",
+      "destino": "/ofertas/frete-gratis",
+      "noViewport": true
+    },
+    {
+      "id": "j23",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Entrar na sua conta Entre na sua conta",
+      "destino": "www.mercadolibre.com/jms/mlb/lgz/msl/login",
+      "noViewport": true
+    },
+    {
+      "id": "j24",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Assistir grátis",
+      "destino": "play.mercadolivre.com.br/assistir/guerra-mundial-z/b35f0caa30fe42d099c666a7df95dba8/player",
+      "noViewport": true
+    },
+    {
+      "id": "j25",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Mostrar meios Meios de pagamento",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j26",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Mostrar produtos Menos de R$100",
+      "destino": "/ofertas",
+      "noViewport": true
+    },
+    {
+      "id": "j27",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Ir para Mais vendidos Mais vendidos",
+      "destino": "/mais-vendidos",
+      "noViewport": true
+    },
+    {
+      "id": "j28",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Seguinte",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j29",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Mostrar todas as ofertas Ofertas",
+      "destino": "/ofertas",
+      "noViewport": true
+    },
+    {
+      "id": "j30",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Central de privacidade.",
+      "destino": "/privacidade",
+      "noViewport": true
+    },
+    {
+      "id": "j31",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Aceitar cookies",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j32",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Configurar cookies",
+      "destino": null,
+      "noViewport": true
+    },
+    {
+      "id": "j33",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Anterior",
+      "destino": null,
+      "noViewport": false
+    },
+    {
+      "id": "j34",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Seguinte",
+      "destino": null,
+      "noViewport": false
+    },
+    {
+      "id": "j35",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Lavadora de Alta Pressão Kärcher Compacta 1.500 PSI/Libras 1400W 300L/h com Apli",
+      "destino": "/lavadora-de-alta-pressao-krcher-compacta-1500-psilibras-1400w-300lh-com-aplicador-de-detergente-e-lanca-regulavel-220v/p/MLB25371983",
+      "noViewport": false
+    },
+    {
+      "id": "j36",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Bicicleta Infantil Menina Aro 12 Nathor Flower Rosa 2 4 Anos Rosa Único",
+      "destino": "/bicicleta-infantil-menina-aro-12-nathor-flower-rosa-2-4-anos/up/MLBU2730430815",
+      "noViewport": false
+    },
+    {
+      "id": "j37",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Monitor Gamer LG 22 22u403a Full Hd 120hz 1ms Hdmi Preto Preto 127/220v",
+      "destino": "/monitor-gamer-lg-22--22u403a--full-hd-120hz-1ms-hdmi-preto/up/MLBU5096633476",
+      "noViewport": false
+    },
+    {
+      "id": "j38",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Cooktop 4 Bocas De Indução Even Pro Midea Cor Preto",
+      "destino": "/cooktop-4-bocas-de-inducao-even-pro-midea-cor-preto/p/MLB47126979",
+      "noViewport": false
+    },
+    {
+      "id": "j39",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Anterior",
+      "destino": null,
+      "noViewport": false
+    },
+    {
+      "id": "j40",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Seguinte",
+      "destino": null,
+      "noViewport": false
+    },
+    {
+      "id": "j41",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Cama Elástica Pula Pula Infantil Trampolim 1,4 Metros Atentu",
+      "destino": "/cama-elastica-pula-pula-infantil-trampolim-14-metros-atentu/p/MLB28717101",
+      "noViewport": false
+    },
+    {
+      "id": "j42",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "PRESENTES DIA DAS CRIANÇAS COM ATÉ 70% OFF Saiba mais",
+      "destino": "click1.mercadolivre.com.br/display/clicks/MLB/count",
+      "noViewport": false
+    },
+    {
+      "id": "j43",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "ATÉ 60% OFF MELHORES OFERTAS DE GRANDES MARCAS Ver mais",
+      "destino": "click1.mercadolivre.com.br/display/clicks/MLB/count",
+      "noViewport": false
+    },
+    {
+      "id": "j44",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Assinar a partir de R$ 9,90",
+      "destino": "/assinaturas/melimais/planos",
+      "noViewport": false
+    },
+    {
+      "id": "j45",
+      "tag": "div",
+      "role": "link",
+      "tipo": null,
+      "nome": "Assuma o controle. Assista o que quiser. grátis",
+      "destino": null,
+      "noViewport": false
+    },
+    {
+      "id": "j46",
+      "tag": "div",
+      "role": "link",
+      "tipo": null,
+      "nome": "Trailer de Homem-Aranha que é reproduzido automaticamente",
+      "destino": null,
+      "noViewport": false
+    },
+    {
+      "id": "j47",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Reproduzir",
+      "destino": null,
+      "noViewport": false
+    },
+    {
+      "id": "j48",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Acesse o Mercado Play",
+      "destino": null,
+      "noViewport": false
+    },
+    {
+      "id": "j49",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Incluído com o Meli+ Total Plano Padrão com anúncios",
+      "destino": "/assinaturas/melimais",
+      "noViewport": false
+    },
+    {
+      "id": "j50",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "NOVO 30% OFF Globoplay Premium",
+      "destino": "/assinaturas/globo",
+      "noViewport": false
+    },
+    {
+      "id": "j51",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "15% OFF HBO Max",
+      "destino": "/assinaturas/hbo",
+      "noViewport": false
+    },
+    {
+      "id": "j52",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Anterior",
+      "destino": null,
+      "noViewport": false
+    },
+    {
+      "id": "j53",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Seguinte",
+      "destino": null,
+      "noViewport": false
+    },
+    {
+      "id": "j54",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "ATÉ 60% OFF MELHORES OFERTAS DE GRANDES MARCAS Ver mais",
+      "destino": "click1.mercadolivre.com.br/display/clicks/MLB/count",
+      "noViewport": false
+    },
+    {
+      "id": "j55",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "LIQUIDA FULL OS MELHORES ITENS DO OUTLET Veja ofertas",
+      "destino": "click1.mercadolivre.com.br/display/clicks/MLB/count",
+      "noViewport": false
+    },
+    {
+      "id": "j56",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Mostrar todas as categorias",
+      "destino": "home.mercadolivre.com.br/categories",
+      "noViewport": false
+    },
+    {
+      "id": "j57",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Carros, Motos e Outros",
+      "destino": "/c/carros-motos-e-outros",
+      "noViewport": false
+    },
+    {
+      "id": "j58",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Celulares e Telefones",
+      "destino": "/c/celulares-e-telefones",
+      "noViewport": false
+    },
+    {
+      "id": "j59",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Eletrodomésticos",
+      "destino": "/c/eletrodomesticos",
+      "noViewport": false
+    },
+    {
+      "id": "j60",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Ferramentas",
+      "destino": "/c/ferramentas",
+      "noViewport": false
+    },
+    {
+      "id": "j61",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Anterior",
+      "destino": null,
+      "noViewport": false
+    },
+    {
+      "id": "j62",
+      "tag": "button",
+      "role": null,
+      "tipo": null,
+      "nome": "Seguinte",
+      "destino": null,
+      "noViewport": false
+    },
+    {
+      "id": "j63",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Acessórios para Veículos",
+      "destino": "/c/acessorios-para-veiculos",
+      "noViewport": false
+    },
+    {
+      "id": "j64",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Calçados, Roupas e Bolsas",
+      "destino": "/c/calcados-roupas-e-bolsas",
+      "noViewport": false
+    },
+    {
+      "id": "j65",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Esportes e Fitness",
+      "destino": "/c/esportes-e-fitness",
+      "noViewport": false
+    },
+    {
+      "id": "j66",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Beleza e Cuidado Pessoal",
+      "destino": "/c/beleza-e-cuidado-pessoal",
+      "noViewport": false
+    },
+    {
+      "id": "j67",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Casa, Móveis e Decoração",
+      "destino": "/c/casa-moveis-e-decoracao",
+      "noViewport": false
+    },
+    {
+      "id": "j68",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Eletrônicos, Áudio e Vídeo",
+      "destino": "/c/eletronicos-audio-e-video",
+      "noViewport": false
+    },
+    {
+      "id": "j69",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Informática",
+      "destino": "/c/informatica",
+      "noViewport": false
+    },
+    {
+      "id": "j70",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Imóveis",
+      "destino": "/imoveis/",
+      "noViewport": false
+    },
+    {
+      "id": "j71",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Como pagar com Mercado Pago",
+      "destino": "/pagar-online-com-mercadopago/",
+      "noViewport": false
+    },
+    {
+      "id": "j72",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "Como te protegemos",
+      "destino": "/compra-garantida",
+      "noViewport": false
+    },
+    {
+      "id": "j73",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "apple watch",
+      "destino": "lista.mercadolivre.com.br/apple-watch",
+      "noViewport": false
+    },
+    {
+      "id": "j74",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "ar condicionado",
+      "destino": "lista.mercadolivre.com.br/ar-condicionado-inverterr",
+      "noViewport": false
+    },
+    {
+      "id": "j75",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "ar condicionado inverter",
+      "destino": "lista.mercadolivre.com.br/ar-condicionado-inverter",
+      "noViewport": false
+    },
+    {
+      "id": "j76",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "bicicletas",
+      "destino": "lista.mercadolivre.com.br/bicicleta",
+      "noViewport": false
+    },
+    {
+      "id": "j77",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "cafeteira",
+      "destino": "lista.mercadolivre.com.br/cafeteira",
+      "noViewport": false
+    },
+    {
+      "id": "j78",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "carros novos",
+      "destino": "lista.mercadolivre.com.br/veiculos/carros-caminhonetes/catalogo/",
+      "noViewport": false
+    },
+    {
+      "id": "j79",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "computador",
+      "destino": "lista.mercadolivre.com.br/computador",
+      "noViewport": false
+    },
+    {
+      "id": "j80",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "fogao 4 boca",
+      "destino": "lista.mercadolivre.com.br/fogao-4-bocas",
+      "noViewport": false
+    },
+    {
+      "id": "j81",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "fone de ouvido bluetooth",
+      "destino": "lista.mercadolivre.com.br/fone-de-ouvido-bluetooth",
+      "noViewport": false
+    },
+    {
+      "id": "j82",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "freezer vertical",
+      "destino": "lista.mercadolivre.com.br/freezer-vertical",
+      "noViewport": false
+    },
+    {
+      "id": "j83",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "geladeira frost free",
+      "destino": "lista.mercadolivre.com.br/geladeira-frost-free",
+      "noViewport": false
+    },
+    {
+      "id": "j84",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "guarda roupa casal",
+      "destino": "lista.mercadolivre.com.br/guarda-roupa-casal",
+      "noViewport": false
+    },
+    {
+      "id": "j85",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "guarda roupa solteiro",
+      "destino": "lista.mercadolivre.com.br/guarda-roupa-solteiro",
+      "noViewport": false
+    },
+    {
+      "id": "j86",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "ipad",
+      "destino": "lista.mercadolivre.com.br/ipad",
+      "noViewport": false
+    },
+    {
+      "id": "j87",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "iphone",
+      "destino": "lista.mercadolivre.com.br/iphone",
+      "noViewport": false
+    },
+    {
+      "id": "j88",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "iphone 8 plus",
+      "destino": "lista.mercadolivre.com.br/iphone-8-plus",
+      "noViewport": false
+    },
+    {
+      "id": "j89",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "iphone 11",
+      "destino": "lista.mercadolivre.com.br/iphone-11",
+      "noViewport": false
+    },
+    {
+      "id": "j90",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "iphone 13",
+      "destino": "lista.mercadolivre.com.br/iphone-13",
+      "noViewport": false
+    },
+    {
+      "id": "j91",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "iphone 13 pro max",
+      "destino": "lista.mercadolivre.com.br/iphone-13-pro-max",
+      "noViewport": false
+    },
+    {
+      "id": "j92",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "iphone 14",
+      "destino": "lista.mercadolivre.com.br/iphone-14",
+      "noViewport": false
+    },
+    {
+      "id": "j93",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "iphone 14 pro",
+      "destino": "lista.mercadolivre.com.br/iphone-14-pro",
+      "noViewport": false
+    },
+    {
+      "id": "j94",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "iphone 14 pro max",
+      "destino": "lista.mercadolivre.com.br/iphone-14-pro-max",
+      "noViewport": false
+    },
+    {
+      "id": "j95",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "iphone 15",
+      "destino": "lista.mercadolivre.com.br/iphone-15",
+      "noViewport": false
+    },
+    {
+      "id": "j96",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "iphone 16",
+      "destino": "lista.mercadolivre.com.br/iphone-16",
+      "noViewport": false
+    },
+    {
+      "id": "j97",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "iphone 16 plus",
+      "destino": "lista.mercadolivre.com.br/iphone-16-plus",
+      "noViewport": false
+    },
+    {
+      "id": "j98",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "iphone 16 pro",
+      "destino": "lista.mercadolivre.com.br/iphone-16-pro",
+      "noViewport": false
+    },
+    {
+      "id": "j99",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "iphone 16 pro max",
+      "destino": "lista.mercadolivre.com.br/iphone-16-pro-max",
+      "noViewport": false
+    },
+    {
+      "id": "j100",
+      "tag": "a",
+      "role": null,
+      "tipo": null,
+      "nome": "jbl",
+      "destino": "lista.mercadolivre.com.br/jbl",
+      "noViewport": false
+    }
+  ]
+}
