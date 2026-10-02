@@ -33,7 +33,7 @@ Estado atual (pastas, produto, próximo número e itens):
 
 - Você só **diagnostica e propõe**. Não faça deploy, rollback nem altere produção.
 - Use apenas as ferramentas permitidas pelo tier da métrica em `${CLAUDE_SKILL_DIR}/bands.yaml`.
-- Correções pequenas e óbvias podem virar PR pelo fluxo normal de review (`/sdlc-bugfix`); o resto vira intent.
+- Correções pequenas e óbvias seguem pelo fluxo normal de bug (`/sdlc-bugfix`); o resto vira intent.
 
 ## Passos
 

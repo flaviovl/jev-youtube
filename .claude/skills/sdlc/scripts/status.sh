@@ -77,15 +77,15 @@ estado() { # pasta número -> "estado|próxima ação|quem"
   elif [ "$tipo" = "poc" ]; then
     echo "POC terminada|levar as respostas ao $product_rel (/sdlc detalhe) e /sdlc concluir $n|você"
   elif [ -f "$d/review.md" ]; then
-    echo "Revisado|ler review.md, aprovar e fazer merge; depois /sdlc concluir $n|você"
+    echo "Revisado|ler review.md, aprovar e levar a develop para a main; depois /sdlc concluir $n|você"
   else
-    echo "Em review|/sdlc-review; depois do merge, /sdlc concluir $n|Claude revisa, você aprova e faz merge"
+    echo "Em review|/sdlc-review $n; depois, levar a develop para a main e /sdlc concluir $n|Claude revisa, você aprova a entrega"
   fi
 }
 
 git_info() {
   if ! git -C "$root" rev-parse --git-dir >/dev/null 2>&1; then
-    echo "git: não é repositório (branches sdlc/NNN indisponíveis)"
+    echo "git: não é repositório (sem histórico de commits)"
   elif ! git -C "$root" rev-parse HEAD >/dev/null 2>&1; then
     echo "git: branch $(git -C "$root" symbolic-ref --short HEAD 2>/dev/null), sem commits"
   else
@@ -112,12 +112,13 @@ detalhe() { # pasta
   echo "Estado: $e"
   echo "Próxima ação: $acao (quem: $quem)"
   if git -C "$root" rev-parse --git-dir >/dev/null 2>&1; then
-    local br last pend
-    br=$(git -C "$root" branch --list "sdlc/$n-*" --format='%(refname:short)' | tr '\n' ' ')
+    local last na_main=não pend
     last=$(git -C "$root" log -1 --format='%h %ad %s' --date=short -- "$changes_rel/$base" 2>/dev/null)
+    # O item chegou à main quando o último commit da pasta dele está nela (fluxo develop → main).
+    git -C "$root" merge-base --is-ancestor "${last%% *}" main 2>/dev/null && na_main=sim
     pend=$(git -C "$root" status --porcelain -- "$changes_rel/$base" 2>/dev/null | awk -v p="$changes_rel/$base/" \
       '{f=$2; if (index(f, p) == 1) f = substr(f, length(p) + 1); print (f == "" ? "pasta inteira" : f)}' | tr '\n' ' ')
-    echo "Branch: ${br:-nenhuma}"
+    [ -n "$last" ] && echo "Na main: $na_main"
     echo "Último commit na pasta: ${last:-nenhum}"
     echo "Não commitado: ${pend:-nada}"
   fi

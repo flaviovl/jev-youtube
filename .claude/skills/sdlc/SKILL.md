@@ -35,9 +35,9 @@ attachments), rode `${CLAUDE_SKILL_DIR}/scripts/status.sh <NNN>`.
 projeto novo ─▶ docs/product/vision.md (sdlc-product) ─▶ aprovado
 ideia, problema ou bug a qualquer momento ─▶ docs/backlog/<slug>.md (operação anotar)
     └─ escolhido ─▶ docs/changes/NNN-slug/ (a entrada vira origin.md)
-        feature: intent ─▶ spec ─▶ plan ─▶ build (passos [x]) ─▶ review + merge ─▶ plan Status: done
+        feature: intent ─▶ spec ─▶ plan ─▶ build (passos [x]) ─▶ review + main ─▶ plan Status: done
         poc:     intent ─▶ plan ─▶ build ─▶ findings.md ─▶ respostas no vision.md ─▶ plan Status: done
-        bug:     intent ─▶ plan test-first ─▶ correção (sdlc-bugfix) ─▶ review + merge ─▶ plan Status: done
+        bug:     intent ─▶ plan test-first ─▶ correção (sdlc-bugfix) ─▶ review + main ─▶ plan Status: done
 alerta ou incidente ─▶ intent novo (sdlc-incident)
 ```
 
@@ -56,15 +56,15 @@ alerta ou incidente ─▶ intent novo (sdlc-incident)
 | 2 Design        | `sdlc-spec`     | `spec.md` (só feature)                                | você (se o risco for alto, também o dono da política)      |
 | 3 Build (plano) | `sdlc-plan`     | `plan.md`                                             | você na conversa; o Claude grava `approved`                |
 | 3–4 Build/Test  | `sdlc-build`    | código, passos `[x]`, verifier; `findings.md` na poc  | CI e você                                                  |
-| Bug             | `sdlc-bugfix`   | `intent.md` (`Tipo: bug`), `plan.md`, teste e código  | você: intent e plano, depois o merge                       |
-| 5 Deploy        | `sdlc-review`   | `review.md` na pasta do item; comentários no PR no CI | você, como code owner, faz o merge                         |
+| Bug             | `sdlc-bugfix`   | `intent.md` (`Tipo: bug`), `plan.md`, teste e código  | você: intent e plano, depois a entrega na `main`           |
+| 5 Deploy        | `sdlc-review`   | `review.md` na pasta do item; comentários no PR no CI | você aprova; a `develop` vai para a `main` com o seu sim   |
 | 6 Maintain      | `sdlc-incident` | novo `intent.md` e linha em `docs/lessons.md`         | você faz a triagem: corrigir agora, agendar ou descartar   |
 
 Neste repositório uma pessoa ocupa todos os papéis (originador, product owner, engenheiro, tech lead, code owner), e
 "você" é essa pessoa. Os portões continuam valendo: a sua resposta na conversa é a assinatura, e o Claude grava o
 `Status` e a "Decisão". Como perguntar, gravar, commitar e reabrir está em
-`${CLAUDE_SKILL_DIR}/references/portao.md`. Commit é opcional e só com o seu sim; push e merge, o Claude no máximo
-sugere.
+`${CLAUDE_SKILL_DIR}/references/portao.md`. Commit é opcional e só com o seu sim; push e entrega na `main`, o Claude
+no máximo sugere. Todo trabalho fica na `develop`, sem branch por item (`${CLAUDE_SKILL_DIR}/references/git.md`).
 
 ## Operações
 
@@ -88,7 +88,7 @@ não só o Status. O que está sem commit é só informação: a aprovação val
 
 - Próxima ação é aprovar um artefato em rascunho: leia o artefato e siga o portão
   (`${CLAUDE_SKILL_DIR}/references/portao.md`), perguntando se aprova e segue, aprova e para, ou quer alterar.
-- Outra ação sua (merge, testar algo, decidir uma pergunta em aberto): diga exatamente o que fazer e pare.
+- Outra ação sua (entregar na `main`, testar algo, decidir uma pergunta em aberto): diga exatamente o que fazer e pare.
 - Próxima ação do Claude: diga numa linha qual etapa vem e invoque a skill que a tabela do estado indica (a coluna
   "Próxima ação"), com a ferramenta Skill e o número do item como argumento (por exemplo, skill `sdlc-spec` com
   argumento `001`). Para `sdlc-plan`, lembre que o ideal é estar em plan mode (Shift+Tab).
@@ -135,8 +135,8 @@ fase reaberta.
 
 ### concluir
 
-"Foi pro ar", "mergeou", "pode fechar o 001". Só com a sua confirmação de que a entrega aconteceu: merge ou release numa
-feature ou num bug; numa poc, `findings.md` escrito e as respostas levadas ao `docs/product/vision.md`. Se o estado não
+"Foi pro ar", "mergeou", "pode fechar o 001". Só com a sua confirmação de que a entrega aconteceu: a `develop` com o
+item chegou à `main` numa feature ou num bug; numa poc, `findings.md` escrito e as respostas levadas ao `docs/product/vision.md`. Se o estado não
 for "Em review", "Revisado" nem "POC terminada", diga o que falta e pergunte se quer concluir mesmo assim. Troque
 `Status: approved` por `Status: done` no `plan.md` e pergunte se commita (portão, "Commit?").
 

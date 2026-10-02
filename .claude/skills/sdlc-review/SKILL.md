@@ -26,14 +26,14 @@ Você faz o review agentic de uma mudança. Você **não** aprova, não corrige 
 revisor humano. Edit está desabilitado enquanto esta skill está ativa. O único arquivo que você grava é o `review.md` da
 pasta do item; não use Write para mais nada.
 
-Alvo: $ARGUMENTS (se vazio, use `git diff main...HEAD`)
+Alvo: $ARGUMENTS (número do item, número de PR ou vazio; sem PR, o diff é `git diff main...develop`)
 
 ## Passos
 
 1. Leia a política em `${CLAUDE_SKILL_DIR}/policy.md` e siga-a à risca (passes, severidade, limite de nits, o que não
    reportar).
-2. Obtenha o diff (`gh pr diff <n>` ou `git diff`). Identifique o item pela branch `sdlc/<NNN>-*` ou pelos links do PR,
-   rode `${CLAUDE_PROJECT_DIR}/.claude/skills/sdlc/scripts/status.sh <NNN>` para achar a pasta e leia `intent.md`,
+2. Obtenha o diff (`gh pr diff <n>` se for PR; senão `git diff main...develop`). Identifique o item pelo número
+   pedido, pelos links do PR ou pelo item em "Em review" no `status.sh`; rode `${CLAUDE_PROJECT_DIR}/.claude/skills/sdlc/scripts/status.sh <NNN>` para achar a pasta e leia `intent.md`,
    `spec.md` (se for feature), `plan.md` e o `review.md` anterior, se houver.
 3. Faça os três passes:
    - **Bugs**: lógica, bordas, regressões.
@@ -58,4 +58,5 @@ antes, sugira adicioná-lo a "Coisas que o Claude erra" no `CLAUDE.md`.
   (`git rev-parse --short HEAD`). Commit do `review.md` e das correções que vierem dele, só se o humano disser sim.
 - Quando o pedido for postar no PR (é o caso do CI), não grave arquivos: poste os achados como comentários.
 
-Depois do merge, o próximo passo é `/sdlc concluir <NNN>`.
+Depois, com o sim do humano, a `develop` vai para a `main` (`${CLAUDE_PROJECT_DIR}/.claude/skills/sdlc/references/git.md`)
+e o próximo passo é `/sdlc concluir <NNN>`.

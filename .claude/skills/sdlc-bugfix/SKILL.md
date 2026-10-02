@@ -41,7 +41,7 @@ no portão (artefato `plan.md`, próxima etapa corrigir, commit `plan: <bug>`), 
 
 ## 3. Corrigir (estado "Build a iniciar" ou "Build k/n")
 
-Trabalhe na branch `sdlc/<NNN>-<slug>` e marque `[x]` em cada passo do `plan.md` assim que ele terminar:
+Trabalhe na `develop` (`${CLAUDE_PROJECT_DIR}/.claude/skills/sdlc/references/git.md`) e marque `[x]` em cada passo do `plan.md` assim que ele terminar:
 
 1. Escreva um teste que **reproduz** o bug, rode e confirme que ele **falha pelo motivo esperado** (cole a saída).
 2. Mostre o teste e a falha e siga o portão (artefato: o teste; próxima etapa, a correção; commit `test: reproduz
@@ -53,6 +53,6 @@ Trabalhe na branch `sdlc/<NNN>-<slug>` e marque `[x]` em cada passo do `plan.md`
 
 ## 4. Entregar
 
-Prepare o PR com `.github/PULL_REQUEST_TEMPLATE.md`, ligado à pasta do item. Se o bug veio de um incidente, sugira
-adicionar um eval em `.claude/evals/` para que a classe de erro não volte. Próximo: `/sdlc-review`; depois do merge,
-`/sdlc concluir <NNN>`.
+Pergunte se o Claude commita o que falta na `develop`; push só com o sim. Se o bug veio de um incidente, sugira
+adicionar um eval em `.claude/evals/` para que a classe de erro não volte. Próximo: `/sdlc-review <NNN>`; depois, com o
+sim do humano, levar a `develop` para a `main` (`${CLAUDE_PROJECT_DIR}/.claude/skills/sdlc/references/git.md`) e `/sdlc concluir <NNN>`.

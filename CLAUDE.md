@@ -72,9 +72,10 @@ Nenhuma registrada ainda. Quando um achado de review se repetir pela segunda vez
 - Não escreva código de produção sem um `plan.md` com `Status: approved` para a tarefa.
 - Entrada: `/sdlc` (status, seguir, novo, anotar, detalhe, voltar, concluir). Produto: `/sdlc-product`. Etapas:
   `/sdlc-intent`, `/sdlc-spec`, `/sdlc-plan`, `/sdlc-build`, `/sdlc-bugfix`, `/sdlc-review`, `/sdlc-incident`.
-- A resposta do humano na conversa é a assinatura de cada artefato; a implementação acontece em branches
-  `sdlc/<NNN>-<slug>`. Um item está concluído quando o `plan.md` tem `Status: done`, gravado só depois que o humano
-  confirma a entrega.
+- A resposta do humano na conversa é a assinatura de cada artefato. Todo trabalho fica na `develop`, sem branch por
+  item; a `main` recebe a `develop` por fast-forward depois do review, com o sim do humano
+  (`.claude/skills/sdlc/references/git.md`). Um item está concluído quando o `plan.md` tem `Status: done`, gravado só
+  depois que o humano confirma a entrega.
 - Se um hook bloquear uma edição, não contorne pelo Bash (`sed`, `echo >`, `cp`): diga ao humano o que ele precisa
   mudar.
 

@@ -36,7 +36,7 @@ docs/lessons.md                    lições de incidentes (Etapa 6)
 .claude/evals/                     suíte de evals do agente (Etapa 4); o CI roda quando .claude/** muda
 .claude/skills/sdlc-incident/bands.yaml  faixas de controle (Etapa 6), lidas só pela sdlc-incident
 .github/workflows/                 review automático e evals no CI
-.github/PULL_REQUEST_TEMPLATE.md   PR sempre ligado a intent, spec e plan
+.github/PULL_REQUEST_TEMPLATE.md   PR opcional (develop → main), ligado a intent, spec e plan
 ```
 
 Os caminhos `docs/changes`, `docs/backlog` e `docs/product/vision.md` estão definidos em dois lugares:
@@ -121,6 +121,7 @@ Quando cada papel é uma pessoa diferente (a skill `sdlc` assume uma pessoa só)
 | template de plan                                                                                     | segue o exemplo do playbook; a checklist e o `Status: done` são deste kit                                                                |
 | template de spec                                                                                     | adaptação: a Anthropic só descreve o conteúdo                                                                                            |
 | aprovação de cada artefato                                                                           | adaptação: o humano aprova na conversa e o Claude grava o `Status` (`references/portao.md`); commit é opcional, e não a assinatura       |
+| branch por item, PR e merge                                                                          | adaptação: todo trabalho na `develop`, entregue na `main` por fast-forward (`references/git.md`); PR opcional                            |
 | pastas `docs/changes/`, `docs/backlog/`, `docs/product/`, skills `sdlc-*`, `status.sh`, hooks        | implementação deste kit                                                                                                                  |
 | `vision.md` acima dos itens, backlog e itens `Tipo: poc` e `Tipo: bug`                               | implementação deste kit: o playbook trata só de mudanças num código existente, sem projeto novo, roadmap nem POC; bug fica fora do ciclo |
 | fora do kit                                                                                          | managed settings via MDM, Code Review gerenciado, Claude Security, Claude Tag em on-call, PSR                                            |
