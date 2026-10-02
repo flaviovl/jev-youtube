@@ -21,13 +21,14 @@ evals de exemplo (`.claude/evals/exemplo-*.json`) já presumem `npm test`, `npm 
 - Código que lê a página, envia dados ao Jev ou executa ações segue a skill `seguranca-acoes-voz`: confirmação para ação
   perigosa (palavra-chave OU julgamento do Jev), senha/cartão/conteúdo de input nunca saem do navegador, limiares num
   único arquivo de configuração, sem transcrição ou conteúdo de página em log, um teste por regra.
-- Aprovação é sempre humana. Não mude `Status` de intent ou spec para `approved`; o `plan.md` só é gravado como
-  `approved` depois que o engenheiro aprova na conversa. Não faça merge de PR.
+- Aprovação é sempre humana, dada na conversa: o Claude só grava `Status: approved` depois do sim do humano, seguindo
+  `.claude/skills/sdlc/references/portao.md`. Commit só com o sim do humano; push e merge, no máximo sugira.
 
 ## Arquitetura do processo
 
 - Hooks em `.claude/settings.json` (precisam de `jq`) bloqueiam com exit 2; a mensagem de stderr diz o motivo:
-  - `protect-paths.sh`: `src/gen/`, `vendor/`, `.github/workflows/` e vision/intent/spec já aprovados em `docs/`.
+  - `protect-paths.sh`: `src/gen/`, `vendor/`, `.github/workflows/` e vision/intent/spec já aprovados em `docs/` (só a
+    troca de `Status: approved` para `draft`, ao reabrir, passa).
   - `protect-tests.sh`: qualquer arquivo de teste enquanto existir `.claude/.tests-locked` (fase C do `/sdlc-bugfix`).
   - `block-secrets.sh`: conteúdo com formato de credencial.
   - `production-gate.sh`: comandos com `deploy` + `prod` ou publicação na Chrome Web Store sem `RELEASE_APPROVAL`.
@@ -64,8 +65,9 @@ Nenhuma registrada ainda. Quando um achado de review se repetir pela segunda vez
 - Não escreva código de produção sem um `plan.md` com `Status: approved` para a tarefa.
 - Entrada: `/sdlc` (status, seguir, novo, anotar, detalhe, voltar, concluir). Produto: `/sdlc-product`. Etapas:
   `/sdlc-intent`, `/sdlc-spec`, `/sdlc-plan`, `/sdlc-build`, `/sdlc-bugfix`, `/sdlc-review`, `/sdlc-incident`.
-- Commit é a assinatura de aprovação de cada artefato; a implementação acontece em branches `sdlc/<NNN>-<slug>`. Um
-  item está concluído quando o `plan.md` tem `Status: done`, gravado só depois que o humano confirma a entrega.
+- A resposta do humano na conversa é a assinatura de cada artefato; a implementação acontece em branches
+  `sdlc/<NNN>-<slug>`. Um item está concluído quando o `plan.md` tem `Status: done`, gravado só depois que o humano
+  confirma a entrega.
 - Se um hook bloquear uma edição, não contorne pelo Bash (`sed`, `echo >`, `cp`): diga ao humano o que ele precisa
   mudar.
 

@@ -53,10 +53,10 @@ $ARGUMENTS
    - Se a origem é uma entrada do backlog, mova o arquivo dela para a pasta do item como `origin.md` e use
      `Origem: entrada do backlog (origin.md)`.
    - Material de apoio do item (diagramas, rascunhos longos) vai em `attachments/` dentro da pasta dele.
-7. **Revisão do originador.** Mostre o intent e peça que ele corrija o que você entendeu errado. Aplique as correções.
-8. **Aprovação.** Não mude o status para `approved`. Diga ao usuário: "Revise e, se aprovar, mude `Status: approved`,
-   preencha **Decisão** e faça commit (`git add <pasta do item> && git commit -m "intent: <título>"`). Se rejeitar, use
-   `Status: rejected` e registre o motivo em Decisão. Depois: `/sdlc-spec <NNN>` (feature) ou `/sdlc-plan <NNN>` (poc)."
+7. **Revisão e aprovação.** Mostre o intent e siga o portão de `${CLAUDE_PROJECT_DIR}/.claude/skills/sdlc/references/portao.md`: artefato
+   `intent.md`; "Quero alterar" é a chance de o originador corrigir o que você entendeu errado; próxima etapa
+   `/sdlc-spec <NNN>` (feature; com o produto ainda em rascunho, aprovar o produto vem
+   antes) ou `/sdlc-plan <NNN>` (poc); commit `intent: <título>`.
 
 Não crie outro arquivo além do intent (e de `attachments/`, se houver material de apoio), não mexa em nada além de mover
 a entrada do backlog, e não escreva código nesta etapa.

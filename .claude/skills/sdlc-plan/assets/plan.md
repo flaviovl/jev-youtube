@@ -6,7 +6,7 @@ Status: draft · Aprovado por: <engenheiro | tech lead se risco alto> · Data: <
 Etapa 3 — BUILD. Produzido no plan mode do Claude Code ANTES de qualquer código.
 Critério de pronto: um engenheiro novo conseguiria implementar só com este plano.
 Se a implementação divergir, atualize este arquivo (o diff final deve bater com ele).
-Status: draft → approved (engenheiro aprova na conversa) → done (entrega confirmada pelo humano).
+Status: draft → approved (engenheiro aprova na conversa; o Claude grava) → done (entrega confirmada pelo humano).
 Ordem do trabalho: o /sdlc-build marca [x] em cada passo que passou em build, testes e lint; o status do item
 é calculado a partir dessas caixas.
 -->

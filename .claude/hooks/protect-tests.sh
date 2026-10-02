@@ -1,5 +1,5 @@
 #!/bin/bash
-# Etapa 4 — durante um /sdlc-bugfix, depois que o teste que reproduz o bug foi commitado,
+# Etapa 4 — durante um /sdlc-bugfix, depois que o teste que reproduz o bug foi aprovado,
 # o arquivo .claude/.tests-locked existe e nenhum arquivo de teste pode ser editado.
 lock="${CLAUDE_PROJECT_DIR:-.}/.claude/.tests-locked"
 [ -f "$lock" ] || exit 0

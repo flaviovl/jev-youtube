@@ -6,7 +6,7 @@ Skills aplicadas: <lista das skills/políticas usadas: segurança, UX, marca, co
 <!--
 Etapa 2 — DESIGN. Requisitos + design em um único documento, conforme as skills
 (políticas) do projeto. Pronto para entregar à engenharia.
-Status: draft → approved (product owner; tech lead quando risco alto).
+Status: draft → approved (product owner na conversa, tech lead quando risco alto; o Claude grava).
 A aprovação dispara a Etapa 3 (plan.md).
 -->
 

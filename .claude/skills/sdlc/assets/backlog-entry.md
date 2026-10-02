@@ -7,7 +7,7 @@ Entrada de backlog: algo que ainda não virou trabalho. Um arquivo por entrada, 
 Não precisa de aprovação.
 Vira trabalho: /sdlc-intent (ideia, problema) ou /sdlc-bugfix (bug) move este arquivo para
 docs/changes/<NNN-slug>/origin.md.
-Descartada: apague o arquivo e diga o motivo na mensagem do commit.
+Descartada: apague o arquivo e diga o motivo na conversa (e no commit, se houver).
 Mudança de princípio, restrição ou escopo do produto não é entrada de backlog: vai para docs/product/vision.md.
 -->
 

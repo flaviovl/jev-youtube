@@ -39,8 +39,9 @@ Estado atual:
 
 Depois de cada passo, rode os comandos da seção "Verificando seu trabalho" do `CLAUDE.md` (build, testes, lint) e itere
 até passar. Nunca pule, desative ou apague um teste que falha: corrija o código. Para UI, compare com o mock ou
-screenshot e itere 2 a 3 rodadas. Quando o passo passar, marque `[x]` nele no `plan.md` e faça um commit pequeno: é isso
-que mostra o progresso no status e o ponto de retomada.
+screenshot e itere 2 a 3 rodadas. Quando o passo passar, marque `[x]` nele no `plan.md`: é isso que mostra o progresso
+no status e o ponto de retomada. Commit não é pedido a cada passo: no início do build, pergunte uma vez (AskUserQuestion)
+se o Claude faz um commit local pequeno a cada passo ou deixa tudo sem commit, e siga a resposta até o fim do item.
 
 ## Desvios
 
@@ -53,8 +54,9 @@ critério de aceitação do spec, não é desvio: pare e sugira voltar ao spec (
 O código é descartável e fica na branch, sem PR para merge. O ciclo de feedback de cada passo é a medição da Prova, não
 build, testes e lint de produção. No estado "Escrever findings", grave `findings.md` na pasta do item a partir de
 `${CLAUDE_SKILL_DIR}/assets/findings.md`: uma seção por pergunta do intent, com resposta, evidência e impacto. Pule o
-verifier e o review. Como a branch nunca é mergeada, traga a pasta do item (plan marcado, `findings.md`, `attachments/`)
-para a `main` com `git checkout sdlc/<NNN>-<slug> -- <pasta do item>` e peça o commit; o código fica só na branch.
+verifier e o review. A branch nunca é mergeada: para guardar a pasta do item (plan marcado, `findings.md`,
+`attachments/`) na `main`, sugira `git checkout sdlc/<NNN>-<slug> -- <pasta do item>` e um commit, e pergunte se o
+Claude faz isso ou se a pasta fica sem commit; o código fica só na branch.
 Ideias que surgirem vão para `docs/backlog/` (skill `sdlc`, operação `anotar`). Próximo: levar as respostas ao
 `docs/product/vision.md` (skill `sdlc`, operação `detalhe`) e `/sdlc concluir <NNN>`.
 
@@ -67,6 +69,6 @@ Corrija o que ele apontar e rode de novo.
 
 - Cole a saída final de build, testes e lint.
 - Mapeie cada critério de aceitação do spec para o teste ou evidência que o prova.
-- Prepare o PR com `.github/PULL_REQUEST_TEMPLATE.md`, com links para intent, spec e plan. **Não faça merge**: quem
-  aprova é o dono do código.
+- Escreva a descrição do PR com `.github/PULL_REQUEST_TEMPLATE.md`, com links para intent, spec e plan, e pergunte se o
+  Claude faz o push e abre o PR; sem o sim, só sugira os comandos. **Não faça merge**: quem aprova é o dono do código.
 - Próximo: `/sdlc-review` no PR. Depois do merge: `/sdlc concluir <NNN>`.

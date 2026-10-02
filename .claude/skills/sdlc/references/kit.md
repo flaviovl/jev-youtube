@@ -77,8 +77,8 @@ SDLC" do `CLAUDE.md`.
 
 | Etapa      | Métricas                                                                                                                                     |
 | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1 Plan     | tempo da primeira conversa até o intent commitado (espera-se horas); proporção de intents que chegam à 2                                     |
-| 2 Design   | tempo entre o commit do intent e o do spec; retrabalho de requisitos (commits no spec após o primeiro plan)                                  |
+| 1 Plan     | tempo da primeira conversa até o intent aprovado (data em Decisão; espera-se horas); proporção de intents que chegam à 2                     |
+| 2 Design   | tempo entre a aprovação do intent e a do spec; retrabalho de requisitos (reaberturas do spec após o primeiro plan)                           |
 | 3 Build    | merges na primeira implementação; tempo da aprovação do plano até o merge; diff final bate com o plan                                        |
 | 4 Test     | sucesso no CI na primeira tentativa; tempo de review por PR; taxa de falha de mudanças                                                       |
 | 5 Deploy   | tempo até o primeiro review; comentários resolvidos sem humano na branch; defeitos pegos antes do merge contra os que escapam; métricas DORA |
@@ -86,9 +86,10 @@ SDLC" do `CLAUDE.md`.
 
 ## 5. Dev solo ou time pequeno
 
-- Você é originador, product owner, engenheiro e tech lead. Mantenha os portões mesmo assim: mudar o `Status` e commitar
-  é a assinatura.
-- Separe os contextos: gere o spec numa sessão e revise ou planeje em outra. O verifier já roda com contexto limpo.
+- Você é originador, product owner, engenheiro e tech lead. Mantenha os portões mesmo assim: a sua resposta na conversa
+  é a assinatura, e o Claude grava o `Status` (`references/portao.md`). Commit é opcional; push e merge são seus.
+- O fluxo segue na mesma sessão depois de cada aprovação. Se quiser contexto limpo para revisar um artefato, abra outra
+  sessão; o verifier já roda com contexto limpo.
 - Comece pequeno: versione intent, spec e plan de um único módulo e mantenha a aprovação humana até ter evidência de que
   mudanças de baixo risco podem ser automatizadas.
 - Ordem de adoção: primeiro intent, `CLAUDE.md`, skills, ciclo de feedback, hooks e plan mode; depois subagentes, evals,
@@ -102,8 +103,8 @@ Quando cada papel é uma pessoa diferente (a skill `sdlc` assume uma pessoa só)
 
 | Etapa      | Quem produz                           | Quem aprova                                                         | O que dispara a próxima              |
 | ---------- | ------------------------------------- | ------------------------------------------------------------------- | ------------------------------------ |
-| 1 Plan     | originador + Claude                   | product owner                                                       | intent `approved` + commit           |
-| 2 Design   | Claude com as skills de política      | product owner (+ tech lead e donos de política se o risco for alto) | spec `approved` + commit             |
+| 1 Plan     | originador + Claude                   | product owner                                                       | intent `approved`                    |
+| 2 Design   | Claude com as skills de política      | product owner (+ tech lead e donos de política se o risco for alto) | spec `approved`                      |
 | 3 Build    | engenheiro + Claude em plan mode      | engenheiro (tech lead se o risco for alto)                          | PR aberto                            |
 | 4 Test     | Claude (ciclo de feedback) + verifier | automático (CI)                                                     | evidência anexada ao PR              |
 | 5 Deploy   | review do Claude + humano             | code owner; release manager para produção                           | merge; deploy com `RELEASE_APPROVAL` |
@@ -119,6 +120,7 @@ Quando cada papel é uma pessoa diferente (a skill `sdlc` assume uma pessoa só)
 | seções "Fora do escopo" e "Como saberemos que deu certo" do intent                                   | acréscimo do kit: o playbook só as cita no brainstorm                                                                                    |
 | template de plan                                                                                     | segue o exemplo do playbook; a checklist e o `Status: done` são deste kit                                                                |
 | template de spec                                                                                     | adaptação: a Anthropic só descreve o conteúdo                                                                                            |
+| aprovação de cada artefato                                                                           | adaptação: o humano aprova na conversa e o Claude grava o `Status` (`references/portao.md`); commit é opcional, e não a assinatura       |
 | pastas `docs/changes/`, `docs/backlog/`, `docs/product/`, skills `sdlc-*`, `status.sh`, hooks        | implementação deste kit                                                                                                                  |
 | `vision.md` acima dos itens, backlog e itens `Tipo: poc` e `Tipo: bug`                               | implementação deste kit: o playbook trata só de mudanças num código existente, sem projeto novo, roadmap nem POC; bug fica fora do ciclo |
 | fora do kit                                                                                          | managed settings via MDM, Code Review gerenciado, Claude Security, Claude Tag em on-call, PSR                                            |

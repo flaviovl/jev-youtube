@@ -6,7 +6,7 @@ Autor: <nome> (<papel>) · Status: draft · Atualizado: <AAAA-MM-DD>
 Documento de produto: o que o produto é, para quem e sob quais princípios. Vale para todos os itens em
 docs/changes/<NNN-slug>/. Não é um item: não passa por spec, plan e build nem fica "done".
 Sem solução técnica: a arquitetura vai nos specs e na seção Arquitetura do CLAUDE.md.
-Status: draft → approved (commit é a assinatura). Para mudar depois de aprovado, o humano volta para draft.
+Status: draft → approved (o dono aprova na conversa; o Claude grava). Para mudar depois de aprovado, o dono pede para reabrir.
 Cada intent herda as restrições daqui e lista só as próprias; o spec confere conformidade com este documento.
 Ideias, problemas e bugs não entram aqui: vão para docs/backlog/.
 -->

@@ -57,5 +57,7 @@ opções existem. Itere até que um engenheiro novo consiga implementar só com 
 
 ## Ao final
 
-Quando o engenheiro aprovar na conversa: grave `plan.md` na pasta do item com `Status: approved`, `Aprovado por: <nome>`
-e a data, e peça o commit (`git commit -m "plan: <título>"`). Próximo passo: `/sdlc-build <NNN>`.
+Siga o portão de `${CLAUDE_PROJECT_DIR}/.claude/skills/sdlc/references/portao.md`: artefato `plan.md`; próxima etapa
+`/sdlc-build <NNN>`; commit `plan: <título>`. Em plan mode, a pergunta de aprovação é o ExitPlanMode: aceito, ele vale
+como "Aprovar"; então grave `plan.md` com `Status: approved`, `Aprovado por: <nome>` e a data, e faça só as perguntas
+que faltam (seguir ou parar, e commit).

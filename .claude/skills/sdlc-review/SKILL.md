@@ -55,7 +55,7 @@ antes, sugira adicioná-lo a "Coisas que o Claude erra" no `CLAUDE.md`.
 
 - Rodando local: acrescente a rodada no fim de `<pasta do item>/review.md`, criando o arquivo a partir de
   `${CLAUDE_SKILL_DIR}/assets/review.md` se ele não existir. Numere a rodada, com data e o commit revisado
-  (`git rev-parse --short HEAD`). Peça o commit do `review.md` junto com as correções que vierem dele.
+  (`git rev-parse --short HEAD`). Commit do `review.md` e das correções que vierem dele, só se o humano disser sim.
 - Quando o pedido for postar no PR (é o caso do CI), não grave arquivos: poste os achados como comentários.
 
 Depois do merge, o próximo passo é `/sdlc concluir <NNN>`.

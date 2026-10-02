@@ -45,13 +45,15 @@ Pedido: $ARGUMENTS
 
 - Em `draft`: edite a seção certa. Antes, confira se a mudança contradiz algum item em andamento (tabela do estado) e
   aponte qual.
-- Em `approved`: não edite; o hook `protect-paths.sh` bloqueia. Peça ao dono para voltar o `Status` para `draft`; depois
-  edite e registre em "Decisão": `Reaberto em AAAA-MM-DD: <motivo>`. Aponte os itens em andamento que a mudança afeta.
+- Em `approved`: não edite; o hook `protect-paths.sh` bloqueia. Pergunte se o dono quer reabrir; com o sim, siga
+  "Reabrir" em `${CLAUDE_PROJECT_DIR}/.claude/skills/sdlc/references/portao.md` e depois edite. Aponte os itens em
+  andamento que a mudança afeta.
 
 ## Aprovação
 
-Não mude o status para `approved`. Diga: "Revise e, se aprovar, mude `Status: approved`, preencha **Decisão** e faça
-commit (`git add docs/product/vision.md && git commit -m "product: <resumo>"`)." Enquanto o produto não estiver
-aprovado, itens `feature` param antes do spec; POC e bug podem rodar antes.
+Ao terminar de criar ou revisar, siga o portão de `${CLAUDE_PROJECT_DIR}/.claude/skills/sdlc/references/portao.md`:
+artefato `docs/product/vision.md`; próxima etapa, o item sugerido em "Próximo passo" (`/sdlc-intent`) ou o item que
+estava esperando o produto; commit `product: <resumo>`. Enquanto o produto não estiver aprovado, itens `feature` param
+antes do spec; POC e bug podem rodar antes.
 
 Não crie itens nem escreva código nesta skill.

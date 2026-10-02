@@ -29,22 +29,23 @@ estado dele na tabela.
   ponha o sintoma e como reproduzir; em "Resultado proposto", o comportamento esperado; em "Perguntas em aberto", a
   causa suspeita.
 - Se o bug veio de `docs/backlog/`, mova a entrada para a pasta do item como `origin.md`.
-- Não mude o status para `approved`. Peça: "Se estiver certo, mude `Status: approved`, preencha **Decisão** e faça
-  commit. Para um bug pequeno, dá para aprovar o intent e o plano no mesmo commit."
+- Siga o portão de `${CLAUDE_PROJECT_DIR}/.claude/skills/sdlc/references/portao.md`: artefato `intent.md`; próxima
+  etapa, planejar a correção; commit `intent: <bug>`. Para um bug pequeno, dá para mostrar intent e plano juntos e
+  aprovar os dois numa pergunta só.
 
 ## 2. Planejar (estado "Plan a gerar" ou "Plan em rascunho")
 
 Leia o código relevante e proponha o plano a partir de `${CLAUDE_SKILL_DIR}/assets/plan.md`: causa suspeita, arquivos
 prováveis e o teste que vai reproduzir o bug. Os quatro passos da Ordem do trabalho são fixos. Quando o usuário aprovar
-na conversa, grave `plan.md` na pasta do item com `Status: approved` e peça o commit.
+no portão (artefato `plan.md`, próxima etapa corrigir, commit `plan: <bug>`), grave `plan.md` com `Status: approved`.
 
 ## 3. Corrigir (estado "Build a iniciar" ou "Build k/n")
 
 Trabalhe na branch `sdlc/<NNN>-<slug>` e marque `[x]` em cada passo do `plan.md` assim que ele terminar:
 
 1. Escreva um teste que **reproduz** o bug, rode e confirme que ele **falha pelo motivo esperado** (cole a saída).
-2. Peça ao usuário para aprovar e fazer commit do teste (`git commit -m "test: reproduz <bug>"`). Depois do commit, crie
-   a trava: `touch .claude/.tests-locked`. Com ela, o hook `protect-tests.sh` bloqueia qualquer edição em arquivos de
+2. Mostre o teste e a falha e siga o portão (artefato: o teste; próxima etapa, a correção; commit `test: reproduz
+   <bug>`). Aprovado o teste, crie a trava: `touch .claude/.tests-locked`. Com ela, o hook `protect-tests.sh` bloqueia qualquer edição em arquivos de
    teste.
 3. Altere apenas código de produção até o teste passar. **Não edite o teste.**
 4. Rode a suíte inteira e o lint (seção "Verificando seu trabalho" do `CLAUDE.md`) e remova a trava:

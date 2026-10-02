@@ -17,7 +17,7 @@ O /sdlc-bugfix marca [x] em cada passo concluído; o status do item é calculado
 ## Ordem do trabalho
 
 - [ ] 1. Teste que reproduz o bug escrito e falhando pelo motivo esperado (saída colada)
-- [ ] 2. Teste commitado e testes travados (`touch .claude/.tests-locked`)
+- [ ] 2. Teste aprovado e testes travados (`touch .claude/.tests-locked`)
 - [ ] 3. Correção só no código de produção; o teste passa
 - [ ] 4. Suíte inteira e lint verdes; trava removida (`rm .claude/.tests-locked`)
 

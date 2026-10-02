@@ -52,7 +52,7 @@ Estado atual:
 
 ## Ao final
 
-Resuma em 5 linhas: requisitos principais, risco, áreas de preocupação que precisam de dono de política. Diga: "Revise
-contra a ideia original; resolva as preocupações com os donos das políticas; se aprovar, mude `Status: approved`,
-preencha **Decisão** e faça commit. Depois: `/sdlc-plan <NNN>`, de preferência numa sessão nova e em plan mode
-(Shift+Tab)."
+Resuma em 5 linhas: requisitos principais, risco, áreas de preocupação que precisam de dono de política. Depois siga o
+portão de `${CLAUDE_PROJECT_DIR}/.claude/skills/sdlc/references/portao.md`: artefato `spec.md`; próxima etapa
+`/sdlc-plan <NNN>` (lembre que o ideal é plan mode, Shift+Tab); commit `spec: <título>`. Com risco alto, diga quem
+mais precisa concordar antes de aprovar.

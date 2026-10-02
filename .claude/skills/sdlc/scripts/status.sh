@@ -43,7 +43,7 @@ estado() { # pasta número -> "estado|próxima ação|quem"
   case "$i" in
     rejected) echo "Encerrado (intent rejeitado)|nenhuma|-"; return ;;
     approved) ;;
-    *) echo "Intent em rascunho|revisar intent.md, preencher Decisão, mudar para Status: approved e commitar|você"; return ;;
+    *) echo "Intent em rascunho|aprovar o intent na conversa (/sdlc seguir $n)|você"; return ;;
   esac
   # Só feature tem spec, e só gera spec com o produto aprovado. POC e bug vão direto ao plano.
   if [ "$tipo" = "feature" ]; then
@@ -51,12 +51,12 @@ estado() { # pasta número -> "estado|próxima ação|quem"
       prod=$(status_of "$root/$product_rel")
       if [ "$prod" = "-" ]; then echo "Aguardando produto|escrever $product_rel (/sdlc-product)|Claude, com você"
       elif [ "$prod" != "approved" ]; then
-        echo "Aguardando produto|revisar $product_rel, mudar para Status: approved e commitar|você"
+        echo "Aguardando produto|aprovar $product_rel na conversa (/sdlc-product)|você"
       else echo "Spec a gerar|/sdlc-spec $n|Claude"; fi
       return
     fi
     if [ "$s" != "approved" ]; then
-      echo "Spec em rascunho|revisar spec.md e Áreas de preocupação, mudar para Status: approved e commitar|você"; return
+      echo "Spec em rascunho|revisar spec.md e Áreas de preocupação e aprovar na conversa (/sdlc seguir $n)|você"; return
     fi
   fi
   if [ "$p" = "-" ]; then echo "Plan a gerar|$planner|Claude, com você"; return; fi
@@ -85,7 +85,7 @@ estado() { # pasta número -> "estado|próxima ação|quem"
 
 git_info() {
   if ! git -C "$root" rev-parse --git-dir >/dev/null 2>&1; then
-    echo "git: não é repositório (aprovação por commit e branches sdlc/NNN indisponíveis)"
+    echo "git: não é repositório (branches sdlc/NNN indisponíveis)"
   elif ! git -C "$root" rev-parse HEAD >/dev/null 2>&1; then
     echo "git: branch $(git -C "$root" symbolic-ref --short HEAD 2>/dev/null), sem commits"
   else

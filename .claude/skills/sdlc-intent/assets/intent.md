@@ -11,7 +11,7 @@ Herda visão, princípios e fora do escopo de docs/product/vision.md: aqui vai s
 Tipo feature: intent → spec → plan → build → review → done.
 Tipo poc: intent → plan → build → findings.md → done; sem spec, código descartável, as respostas voltam ao vision.md.
 Tipo bug: intent (sintoma, como reproduzir, esperado) → plan test-first → correção → review → done; sem spec.
-Status: draft → approved (aprovado pelo product owner via merge/commit)
+Status: draft → approved (product owner aprova na conversa; o Claude grava)
         | rejected (motivo registrado no fim).
 -->
 
