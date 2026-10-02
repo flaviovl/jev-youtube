@@ -3,9 +3,48 @@
   <head>
     <meta charset="utf-8" />
     <title>Jev</title>
+    <style>
+      :root { color-scheme: light dark; --borda: #8884; --destaque: #1565c0; }
+      body { font: 15px/1.4 system-ui, sans-serif; margin: 12px; }
+      h1 { font-size: 17px; margin: 0 0 8px; }
+      #falar { font-size: 16px; padding: 8px 16px; background: var(--destaque); color: #fff; border: 0; border-radius: 6px; }
+      #falar:disabled { opacity: 0.6; }
+      #frase { font-size: 18px; min-height: 1.4em; margin: 8px 0 2px; }
+      #estado { font-weight: 600; }
+      section { border-top: 1px solid var(--borda); margin-top: 12px; padding-top: 8px; font-size: 13px; }
+      button { font: inherit; }
+    </style>
   </head>
   <body>
-    <h1>Jev</h1>
+    <h1>Jev: navegador por voz</h1>
+    <p>
+      <button id="falar" aria-keyshortcuts="Space">Falar</button>
+      <small>Espaço com o painel em foco, ou o atalho da extensão.</small>
+    </p>
+    <p id="frase" aria-label="Frase reconhecida"></p>
+    <p aria-live="polite"><span id="estado">Pronto.</span> <span id="detalhe"></span></p>
+    <p id="microfone" hidden>
+      <button id="permitir">Permitir o microfone</button>
+    </p>
+
+    <section aria-labelledby="titulo-dados">
+      <h2 id="titulo-dados" style="font-size: 14px; margin: 0">Para onde vão os dados</h2>
+      <fieldset style="border: 0; padding: 0; margin: 4px 0">
+        <legend>Transcrição da fala</legend>
+        <label><input type="radio" name="modo" value="nuvem" checked /> Nuvem: o áudio vai para o Google.</label><br />
+        <label><input type="radio" name="modo" value="local" /> Local: o áudio fica neste computador.</label>
+      </fieldset>
+      <p id="modo-local" aria-live="polite"></p>
+      <button id="baixar" hidden>Baixar o pacote de pt-BR</button>
+      <p>A frase e os nomes dos botões e links da página aberta vão para o Jev, no OpenRouter. Senhas, cartões e o que você
+        digitou nunca saem do navegador.</p>
+    </section>
+
+    <section aria-labelledby="titulo-metricas">
+      <h2 id="titulo-metricas" style="font-size: 14px; margin: 0">Tempos desta sessão</h2>
+      <p id="metricas">Nenhuma ação ainda.</p>
+      <button id="copiar">Copiar tempos</button>
+    </section>
     <script type="module" src="sidepanel.js"></script>
   </body>
 </html>

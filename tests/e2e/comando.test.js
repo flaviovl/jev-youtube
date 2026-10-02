@@ -16,6 +16,7 @@ const JEV = {
 }
 
 let ctx, painel, fixture, servidores, pedidosAoJev
+const errosDoPainel = []
 const ouvir = (servidor, porta = 0) =>
   new Promise((ok, erro) => {
     servidor.once('error', erro)
@@ -56,6 +57,7 @@ before(async () => {
   servidores = [site, jevFalso, proxy]
 
   painel = await ctx.newPage()
+  painel.on('pageerror', (e) => errosDoPainel.push(e.message))
   await painel.goto(`chrome-extension://${extensaoId}/sidepanel/sidepanel.html`)
 })
 after(async () => {
@@ -117,4 +119,9 @@ test('página chrome:// avisa que não lê e não chama o Jev', async () => {
   assert.deepEqual(r, { decisao: 'erro', erro: 'pagina-ilegivel' })
   assert.equal(pedidosAoJev, antes)
   await pagina.close()
+})
+
+test('o painel abre sem erro de JavaScript', async () => {
+  assert.match(await painel.textContent('#estado'), /Pronto/)
+  assert.deepEqual(errosDoPainel, [])
 })

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Jev: microfone</title>
+    <style>
+      :root { color-scheme: light dark; }
+      body { font: 15px/1.4 system-ui, sans-serif; margin: 24px; max-width: 560px; }
+    </style>
+  </head>
+  <body>
+    <h1 style="font-size: 18px">Permitir o microfone para o Jev</h1>
+    <p>O painel do Jev só consegue ouvir depois que o Chrome dá o microfone à extensão. Isso acontece uma vez, nesta
+      aba.</p>
+    <p>Estado atual: <strong id="estado">verificando…</strong></p>
+    <button id="permitir">Permitir o microfone</button>
+    <p id="resultado" aria-live="polite"></p>
+    <script type="module" src="permissao.js"></script>
+  </body>
+</html>

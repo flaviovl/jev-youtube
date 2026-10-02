@@ -9,6 +9,15 @@ const TEMPO_PROXY_MS = 3500
 
 chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true }).catch(() => {})
 
+// Atalho "Falar": abre o painel (precisa ser chamado direto no gesto) e pede para ouvir. Se o painel acabou de abrir e
+// ainda não recebe mensagens, ele lê o pedido guardado na sessão.
+chrome.commands.onCommand.addListener((nome, aba) => {
+  if (nome !== 'falar') return
+  chrome.sidePanel.open({ windowId: aba.windowId }).catch(() => {})
+  chrome.storage.session.set({ falarAoAbrir: true })
+  chrome.runtime.sendMessage({ tipo: 'falar' }).catch(() => {})
+})
+
 chrome.runtime.onMessage.addListener((msg, remetente, responder) => {
   // Só páginas da própria extensão (o painel) mandam comandos; os scripts injetados nas abas não mandam mensagens.
   if (remetente.id !== chrome.runtime.id || !remetente.url?.startsWith(chrome.runtime.getURL(''))) return
