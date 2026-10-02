@@ -46,6 +46,18 @@ const ACOES = { abrir: 'Abri o site', buscar: 'Busquei', voltar: 'Voltei', rolar
 
 let ocupado = false
 const tempos = []
+// Resultado de cada comando desta sessão, só em memória e sem a frase: o roteiro de teste copia daqui (CA-05, CA-06).
+const historico = []
+const anotar = (aba, r, extra) =>
+  historico.push({
+    site: aba.url ? new URL(aba.url).host : '',
+    decisao: r?.decisao,
+    acao: r?.resultado?.acao,
+    ok: r?.resultado?.ok,
+    erro: r?.resultado?.erro ?? r?.erro,
+    totalMs: r?.totalMs,
+    ...extra,
+  })
 
 function mostrar(estado, detalhe = '') {
   $('estado').textContent = ESTADOS[estado] ?? estado
@@ -105,10 +117,11 @@ async function falar() {
         atualizarMetricas()
       } else if (motivo === 'confirmar') {
         await falaTerminou
-        return confirmar(r, processLocally)
+        return confirmar(r, processLocally, aba)
       } else if (motivo === 'erro') mostrarResultado(r)
       else if (erroDaFala && (motivo === 'cancelada' || motivo === 'sem fala')) mostrarErroDaFala(erroDaFala)
       else mostrar(motivo)
+      anotar(aba, r, { decisao: motivo })
       liberar()
     },
   })
@@ -136,7 +149,7 @@ function mostrarErroDaFala(erro) {
 }
 
 // Ação perigosa: só "sim" falado executa (skill seguranca-acoes-voz, regra 1).
-function confirmar(r, processLocally) {
+function confirmar(r, processLocally, aba) {
   const alvo = r.elemento.nome ? ` "${r.elemento.nome}"` : ''
   mostrar('confirmando', `${r.intencao === 'clicar' ? 'Clicar em' : 'Executar'}${alvo}? Diga "sim" ou "não".`)
   let fala = null
@@ -147,13 +160,17 @@ function confirmar(r, processLocally) {
       registrar('confirmacao-respondida', { confirmacao: resposta })
       if (resposta !== 'sim') {
         mostrar('cancelada')
+        anotar(aba, r, { confirmacao: resposta })
         return liberar()
       }
+      let e
       try {
-        mostrarResultado({ ...r, ...(await chrome.runtime.sendMessage({ tipo: 'executar', pendente: r.pendente })) })
+        e = { ...r, ...(await chrome.runtime.sendMessage({ tipo: 'executar', pendente: r.pendente })) }
       } catch {
-        mostrar('erro', ERROS['falha-interna'])
+        e = { ...r, decisao: 'erro', erro: 'falha-interna' }
       }
+      mostrarResultado(e)
+      anotar(aba, e, { confirmacao: resposta })
       liberar()
     },
   })
@@ -209,7 +226,7 @@ document.addEventListener('keydown', (e) => {
   falar()
 })
 $('permitir').addEventListener('click', () => chrome.tabs.create({ url: chrome.runtime.getURL('permissao/permissao.html') }))
-$('copiar').addEventListener('click', () => navigator.clipboard.writeText(JSON.stringify({ totalMs: tempos })))
+$('copiar').addEventListener('click', () => navigator.clipboard.writeText(JSON.stringify(historico)))
 
 // Atalho da extensão: o service worker abre o painel e pede para ouvir.
 chrome.runtime.onMessage.addListener((msg) => {
