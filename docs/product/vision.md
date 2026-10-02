@@ -1,6 +1,6 @@
 # Produto: navegador por voz
 
-Autor: Flavio (produto) · Status: draft · Atualizado: 2026-10-01
+Autor: Flavio (produto) · Status: approved · Atualizado: 2026-10-01
 
 <!--
 Documento de produto: o que o produto é, para quem e sob quais princípios. Vale para todos os itens em
@@ -158,4 +158,4 @@ máquina e seis sites públicos, então indicam viabilidade, mas não provam as 
 
 ## Decisão
 
-<preenchido pelo product owner>
+approved por Flavio Vieira Leao na conversa em 2026-10-01, com as respostas da POC 001.
