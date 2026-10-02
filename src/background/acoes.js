@@ -22,7 +22,12 @@ export async function executar({ abaId, intencao, elementoId, frase }) {
       return { acao: 'buscar', ok: true }
     }
     case 'voltar':
-      await chrome.tabs.goBack(abaId)
+      try {
+        await chrome.tabs.goBack(abaId)
+      } catch {
+        // O Chrome rejeita quando a aba não tem página anterior.
+        return { acao: 'voltar', ok: false, erro: 'sem-pagina-anterior' }
+      }
       return { acao: 'voltar', ok: true }
     case 'rolar': {
       const sentido = direcao(frase)

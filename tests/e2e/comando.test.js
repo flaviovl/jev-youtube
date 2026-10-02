@@ -13,9 +13,10 @@ const JEV = {
   'clica em comprar agora': { intencao: 'clicar', alvo: 'Comprar agora', comando: 0.81, terminou: 0.85, perigoso: 0.66 },
   'nossa que legal': { intencao: 'nenhuma', comando: 0.02, terminou: 0.76, perigoso: 0.02 },
   'rola para baixo': { intencao: 'rolar', comando: 0.91, terminou: 0.74, perigoso: 0.02 },
+  'volta para a página anterior': { intencao: 'voltar', comando: 0.9, terminou: 0.85, perigoso: 0.02 },
 }
 
-let ctx, painel, fixture, servidores, pedidosAoJev
+let ctx, painel, fixture, documentoPdf, servidores, pedidosAoJev
 const errosDoPainel = []
 const ouvir = (servidor, porta = 0) =>
   new Promise((ok, erro) => {
@@ -26,7 +27,12 @@ const ouvir = (servidor, porta = 0) =>
 before(async () => {
   pedidosAoJev = 0
   const html = await readFile(new URL('../fixtures/pagina-teste.html', import.meta.url))
-  const site = createServer((req, res) => res.writeHead(200, { 'content-type': 'text/html' }).end(html))
+  const pdf = await readFile(new URL('../fixtures/documento.pdf', import.meta.url))
+  const site = createServer((req, res) =>
+    req.url.endsWith('.pdf')
+      ? res.writeHead(200, { 'content-type': 'application/pdf' }).end(pdf)
+      : res.writeHead(200, { 'content-type': 'text/html' }).end(html),
+  )
   const jevFalso = createServer(async (req, res) => {
     let corpo = ''
     for await (const parte of req) corpo += parte
@@ -46,7 +52,9 @@ before(async () => {
       }),
     )
   })
-  fixture = `${await ouvir(site)}/pagina-teste.html`
+  const urlSite = await ouvir(site)
+  fixture = `${urlSite}/pagina-teste.html`
+  documentoPdf = `${urlSite}/documento.pdf`
   const urlJev = await ouvir(jevFalso)
 
   ctx = await abrirComExtensao()
@@ -125,6 +133,28 @@ test('página chrome:// avisa que não lê e não chama o Jev', async () => {
   const r = await mandar({ tipo: 'comando', frase: 'clica em entrar', abaId })
   assert.deepEqual(r, { decisao: 'erro', erro: 'pagina-ilegivel' })
   assert.equal(pedidosAoJev, antes)
+  await pagina.close()
+})
+
+// RF-11: o visualizador de PDF fica fora do DOM; a extensão avisa em vez de mandar uma página vazia ao Jev.
+test('PDF avisa que não lê e não chama o Jev', async () => {
+  const antes = pedidosAoJev
+  const { pagina, abaId } = await abrirAba(documentoPdf)
+  const r = await mandar({ tipo: 'comando', frase: 'clica em entrar', abaId })
+  assert.deepEqual(r, { decisao: 'erro', erro: 'pagina-ilegivel' })
+  assert.equal(pedidosAoJev, antes)
+  await pagina.close()
+})
+
+test('"voltar" numa aba sem página anterior avisa, sem falha interna', async () => {
+  // Aba criada pela extensão já na página: o Playwright passaria antes por about:blank, que conta como anterior.
+  const carregou = ctx.waitForEvent('page', (p) => p.url().startsWith(fixture) || p.waitForURL(fixture))
+  const abaId = await painel.evaluate((url) => chrome.tabs.create({ url }).then((t) => t.id), fixture)
+  const pagina = await carregou
+  await pagina.waitForLoadState()
+  const r = await mandar({ tipo: 'comando', frase: 'volta para a página anterior', abaId })
+  const e = await mandar({ tipo: 'executar', pendente: r.pendente })
+  assert.deepEqual(e.resultado, { acao: 'voltar', ok: false, erro: 'sem-pagina-anterior' })
   await pagina.close()
 })
 

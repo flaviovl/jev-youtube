@@ -36,6 +36,7 @@ const ERROS = {
   'elemento-ausente': 'não achei o elemento na página.',
   'elemento-sumiu': 'a página mudou antes do clique.',
   'sem-acao': 'entendi, mas não há ação para isso.',
+  'sem-pagina-anterior': 'esta aba não tem página anterior.',
   'not-allowed': 'sem permissão para o microfone.',
   'audio-capture': 'nenhum microfone encontrado.',
   network: 'a transcrição na nuvem falhou (rede).',
