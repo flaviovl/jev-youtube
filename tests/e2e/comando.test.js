@@ -53,8 +53,9 @@ before(async () => {
   const sw = ctx.serviceWorkers()[0] ?? (await ctx.waitForEvent('serviceworker'))
   const extensaoId = new URL(sw.url()).host
   const proxy = criarServidor({ chave: 'chave-de-teste', extensaoId, modelo: 'jev-falso', jevUrl: urlJev })
-  await ouvir(proxy, PORTA_PROXY).catch(() => assert.fail(`porta ${PORTA_PROXY} ocupada: pare o proxy local`))
   servidores = [site, jevFalso, proxy]
+  // Com o proxy local no ar a porta está ocupada; o after fecha o Chromium e os servidores mesmo assim.
+  await ouvir(proxy, PORTA_PROXY).catch(() => assert.fail(`porta ${PORTA_PROXY} ocupada: pare o proxy local (npm run proxy)`))
 
   painel = await ctx.newPage()
   painel.on('pageerror', (e) => errosDoPainel.push(e.message))
@@ -62,7 +63,7 @@ before(async () => {
 })
 after(async () => {
   await ctx?.close()
-  for (const s of servidores ?? []) s.close()
+  for (const s of servidores ?? []) if (s.listening) s.close()
 })
 
 async function abrirAba(url) {

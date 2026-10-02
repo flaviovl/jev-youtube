@@ -37,8 +37,14 @@ async function ler(abaId) {
     if (result.tipoDocumento === 'application/pdf') throw falha('pagina-ilegivel')
     return result
   } catch (e) {
+    if (e.codigo) throw e
+    const msg = String(e.message)
+    // Acesso ao site negado ou "ao clicar" nos detalhes da extensão.
+    if (/must request permission|Cannot access contents/i.test(msg)) throw falha('sem-acesso-ao-site')
     // chrome://, Chrome Web Store e outras páginas onde o Chrome não deixa injetar.
-    throw e.codigo ? e : falha('pagina-ilegivel')
+    if (/Cannot access a chrome|cannot be scripted|chrome-extension:\/\/|Cannot access/i.test(msg))
+      throw falha('pagina-ilegivel')
+    throw falha('leitura-falhou')
   }
 }
 

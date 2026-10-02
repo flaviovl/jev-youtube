@@ -23,6 +23,9 @@ const ESTADOS = {
 }
 const ERROS = {
   'pagina-ilegivel': 'não consigo ler esta página.',
+  'sem-acesso-ao-site':
+    'a extensão não tem acesso a este site. Em chrome://extensions, Detalhes do Jev, "Acesso ao site": Em todos os sites.',
+  'leitura-falhou': 'a leitura da página falhou.',
   'jev-indisponivel': 'o Jev não respondeu. O proxy local está no ar (npm run proxy)?',
   'jev-tempo-esgotado': 'o Jev demorou demais.',
   'jev-falhou': 'o Jev devolveu uma resposta inválida.',
