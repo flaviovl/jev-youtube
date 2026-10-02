@@ -4,6 +4,22 @@
   "version": "0.1.0",
   "description": "Fale um comando em português e o Chrome executa na aba aberta.",
   "minimum_chrome_version": "153",
-  "permissions": ["sidePanel", "scripting", "storage"],
-  "host_permissions": ["<all_urls>"]
+  "permissions": [
+    "sidePanel",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "side_panel": {
+    "default_path": "sidepanel/sidepanel.html"
+  },
+  "action": {
+    "default_title": "Abrir o Jev"
+  }
 }

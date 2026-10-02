@@ -75,7 +75,7 @@ compactação). O código da POC 001 (`_poc/`, ignorado pelo git) é referência
 - [x] 6. Proxy: `server.js` e `jev.js` com um Jev falso local. Fim: `proxy.test.js` prova 403 sem `Origin` e com outra
       origem, 200 com a `Origin` da extensão, o mapeamento da resposta e o tempo limite (CA-07); `grep -r OPENROUTER src/`
       não acha nada (CA-08).
-- [ ] 7. Orquestração: `service-worker.js` e `acoes.js`. Fim: `npm run e2e` com o Jev falso prova clique real na
+- [x] 7. Orquestração: `service-worker.js` e `acoes.js`. Fim: `npm run e2e` com o Jev falso prova clique real na
       fixture, "confirmar" em "Comprar agora", "ignorar" em conversa, rolagem, e aviso de página ilegível numa página
       `chrome://` sem pedido ao proxy (CA-09).
 - [ ] 8. Painel: fala, estados, confirmação falada, nuvem ou local, permissão e atalho. Fim: o engenheiro fala "clica em
@@ -124,3 +124,12 @@ compactação). O código da POC 001 (`_poc/`, ignorado pelo git) é referência
   (`tests/*.test.js`) não rodar o e2e. O passo 1 ganhou `tests/e2e/carrega.test.js`, que prova a carga da extensão no
   Chromium, e `tests/e2e/chromium.js`, que abre o Chromium com a extensão; `tests/manifest.test.js` confere que o
   manifest é MV3 e não declara content script. `.gitignore` ganhou `node_modules/`.
+- 2026-10-01, passo 7, escolhas que o plano não fixava:
+  - o painel manda o ID da aba junto com a frase (`{ tipo: 'comando', frase, abaId }`), e o service worker só aceita
+    mensagens de páginas da própria extensão. Assim o e2e mira a aba de teste sem um gatilho dentro do produto;
+  - o painel mínimo (`src/sidepanel/sidepanel.html` e `.js`) foi criado no passo 7, porque o e2e manda as frases por uma
+    página da extensão; o passo 8 o completa;
+  - a leitura devolve também `tipoDocumento` (`document.contentType`), e o service worker trata `application/pdf` como
+    página ilegível (RF-11). Esse campo não vai ao Jev;
+  - o e2e do caminho inteiro fica em `tests/e2e/comando.test.js` e usa o proxy de verdade na porta 8787 com um Jev
+    falso; ele falha com aviso se o proxy local estiver no ar.

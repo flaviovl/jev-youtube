@@ -156,6 +156,8 @@ export function lerPagina() {
 
   return {
     url: location.origin + location.pathname,
+    // O visualizador de PDF fica fora do DOM: o service worker usa o tipo para avisar que não lê a página.
+    tipoDocumento: document.contentType,
     titulo: document.title.slice(0, 80),
     ms: Math.round(performance.now() - t0),
     elementos,
