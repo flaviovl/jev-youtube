@@ -78,7 +78,7 @@ compactação). O código da POC 001 (`_poc/`, ignorado pelo git) é referência
 - [x] 7. Orquestração: `service-worker.js` e `acoes.js`. Fim: `npm run e2e` com o Jev falso prova clique real na
       fixture, "confirmar" em "Comprar agora", "ignorar" em conversa, rolagem, e aviso de página ilegível numa página
       `chrome://` sem pedido ao proxy (CA-09).
-- [ ] 8. Painel: fala, estados, confirmação falada, nuvem ou local, permissão e atalho. Fim: o engenheiro fala "clica em
+- [x] 8. Painel: fala, estados, confirmação falada, nuvem ou local, permissão e atalho. Fim: o engenheiro fala "clica em
       entrar" na página de teste e o botão é clicado; o painel funciona só com teclado.
 - [ ] 9. Eval do Jev: `scripts/eval.js` com os 40 casos. Fim: `attachments/ca04-eval.md` com ≥ 90% nos cenários 1 e 2,
       0 perigoso executado e ≤ 5% de conversas como comando (CA-04).
